@@ -1,0 +1,197 @@
+{
+	"patcher" : 	{
+		"fileversion" : 1,
+		"appversion" : 		{
+			"major" : 7,
+			"minor" : 3,
+			"revision" : 1,
+			"architecture" : "x64",
+			"modernui" : 1
+		}
+,
+		"rect" : [ 886.0, 423.0, 965.0, 850.0 ],
+		"editing_bgcolor" : [ 0.9, 0.9, 0.9, 1.0 ],
+		"bglocked" : 0,
+		"openinpresentation" : 0,
+		"default_fontsize" : 12.0,
+		"default_fontface" : 0,
+		"default_fontname" : "Arial",
+		"gridonopen" : 1,
+		"gridsize" : [ 15.0, 15.0 ],
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
+		"statusbarvisible" : 2,
+		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
+		"boxanimatetime" : 200,
+		"enablehscroll" : 1,
+		"enablevscroll" : 1,
+		"devicewidth" : 0.0,
+		"description" : "",
+		"digest" : "",
+		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
+		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-13",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 774.0, 14.0, 114.0, 22.0 ],
+					"style" : "",
+					"text" : "param z_depth 100"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-12",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 610.0, 14.0, 150.0, 20.0 ],
+					"style" : "",
+					"text" : "Velocity Tex In"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 337.0, 14.0, 150.0, 20.0 ],
+					"style" : "",
+					"text" : "Last Position In"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"code" : "//function to check if a portion of th coordinate is in system bounds\r\ncheck_scalar(x) {\r\n\tif(x < 1. && x > 0.)\r\n \t{\r\n\t\treturn 1.;\r\n\t}\r\n\telse\r\n\t{\r\n\t\treturn 0.;\r\n\t}\r\n}\r\n\r\n//used to convert from a 3D point to the corresponding 2D point in the input\r\n//texture velocity field\r\ncalculate_2D_coords(x,y,z){\r\n\t//first get absolute z position\r\n\tzDelta = z * in4.r;\r\n\t//add the normalized x position\r\n\txCoord = x + zDelta;\r\n\t//normalize\r\n\tnx = xCoord / (in4.r + 1); //+ 1 for added normalized x component\r\n\t//create the point vector\r\n\tnPoint = vec(nx,y);\r\n\t\r\n\treturn nPoint;\r\n}\r\n\r\n//find current coordinates\r\nx = in2.r;\r\ny = in2.g;\r\nz = in2.b;\r\n\r\n//check if it is within the bounds of the system\r\nif(check_scalar(x) == 1. && check_scalar(y) == 1. && check_scalar(z) == 1.)\r\n{\r\n\t//first get absolute z position\r\n\tzDelta = z * z_depth;\r\n\t//add the normalized x position\r\n\txCoord = x + zDelta;\r\n\t//normalize\r\n\tnx = xCoord / (z_depth + 1); //+ 1 for added normalized x component\r\n\t//create the point vector\r\n\tnp = vec(nx,y);\r\n\t//sample (or really nearest...)\r\n\tnVel = nearest(in3, np);\r\n\t//sum the velocity with the previous position\r\n\tnPos = in2 + nVel;\r\n\t//output the new position\r\n\tout1 = vec(nPos.r,nPos.g,nPos.b,1.); //trailing 1 for alpha, ignore\r\n}\r\nelse\r\n{\r\n\tout1 = in1;\r\n}\r\n",
+					"fontface" : 0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-8",
+					"maxclass" : "codebox",
+					"numinlets" : 4,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 50.0, 107.0, 555.0, 688.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 82.0, 14.0, 156.0, 47.0 ],
+					"style" : "",
+					"text" : "Just Used to trigger processing and for particle reset"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 575.0, 14.0, 30.0, 22.0 ],
+					"style" : "",
+					"text" : "in 3"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 50.0, 14.0, 30.0, 22.0 ],
+					"style" : "",
+					"text" : "in 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 305.0, 14.0, 30.0, 22.0 ],
+					"style" : "",
+					"text" : "in 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 50.0, 817.0, 37.0, 22.0 ],
+					"style" : "",
+					"text" : "out 1"
+				}
+
+			}
+ ],
+		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 2 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+ ]
+	}
+
+}
