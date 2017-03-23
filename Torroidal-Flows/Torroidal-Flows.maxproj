@@ -1,8 +1,8 @@
 {
 	"name" : "Torroidal-Flows",
 	"version" : 1,
-	"creationdate" : 3569394226,
-	"modificationdate" : 3569841861,
+	"creationdate" : -725573070,
+	"modificationdate" : -722067145,
 	"viewrect" : [ 27.0, 71.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -35,6 +35,11 @@
 				"kind" : "patcher",
 				"local" : 1
 			}
+,
+			"torr.velocity.visual.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
 
 		}
 ,
@@ -64,12 +69,12 @@
 				"local" : 1
 			}
 ,
-			"torr.pix.particleinit.genjit" : 			{
+			"torr.pix.particleflow.genjit" : 			{
 				"kind" : "genjit",
 				"local" : 1
 			}
 ,
-			"torr.pix.particleflow.genjit" : 			{
+			"torr.pix.particleinit.genjit" : 			{
 				"kind" : "genjit",
 				"local" : 1
 			}

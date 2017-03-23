@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 3,
 			"revision" : 1,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 755.0, 261.0, 931.0, 480.0 ],
+		"rect" : [ 284.0, 240.0, 931.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,14 +38,74 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-25",
+					"id" : "obj-33",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 199.0, 132.0, 89.0, 22.0 ],
+					"style" : "",
+					"text" : "position 0 0 50"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-31",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 58.0, 402.0, 278.0, 22.0 ],
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_gl_texture", "" ],
+					"patching_rect" : [ 199.0, 173.0, 209.0, 22.0 ],
 					"style" : "",
-					"text" : "torr.particles @drawto flows @particle_count 1000",
-					"varname" : "torr.particles"
+					"text" : "jit.gl.camera flows @position 0. 0. 15."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-30",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 337.0, 236.0, 24.0, 24.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-27",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 782.0, 205.0, 24.0, 24.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-25",
+					"maxclass" : "jit.pwindow",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 716.0, 298.0, 246.0, 167.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-20",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 0,
+					"patching_rect" : [ 82.0, 340.0, 187.0, 22.0 ],
+					"style" : "",
+					"text" : "torr.velocity.visual @drawto flows"
 				}
 
 			}
@@ -72,7 +132,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 172.0, 231.0, 50.0, 62.0 ],
 					"style" : "",
-					"text" : "jit_gl_texture u954000554"
+					"text" : "jit_gl_texture u951000635"
 				}
 
 			}
@@ -232,8 +292,8 @@
 					"id" : "obj-8",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "jit_gl_texture" ],
 					"patching_rect" : [ 453.0, 204.0, 258.0, 22.0 ],
 					"style" : "",
 					"text" : "torr.velocity @drawto flows @dim 100 100 100",
@@ -385,10 +445,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-25", 0 ],
+					"destination" : [ "obj-20", 2 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-1", 0 ]
+					"source" : [ "obj-1", 1 ]
 				}
 
 			}
@@ -475,6 +535,24 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-19", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-30", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-19", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-9", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -529,6 +607,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-31", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-33", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -574,78 +661,84 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-20", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-8", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-25", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-8", 0 ]
+					"source" : [ "obj-8", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-27", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-8", 1 ]
 				}
 
 			}
  ],
 		"dependency_cache" : [ 			{
 				"name" : "torr.render.maxpat",
-				"bootpath" : "~/Documents/Connor/Pratt-Torroidal/Torroidal-Flows/patchers",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.syphon-input.maxpat",
-				"bootpath" : "~/Documents/Connor/Pratt-Torroidal/Torroidal-Flows/patchers",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.pix.inputmodification.genjit",
-				"bootpath" : "~/Documents/Connor/Pratt-Torroidal/Torroidal-Flows/code",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.velocity.maxpat",
-				"bootpath" : "~/Documents/Connor/Pratt-Torroidal/Torroidal-Flows/patchers",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.pix.unperturbedvelocity.genjit",
-				"bootpath" : "~/Documents/Connor/Pratt-Torroidal/Torroidal-Flows/code",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.pix.perturbedvelocity.genjit",
-				"bootpath" : "~/Documents/Connor/Pratt-Torroidal/Torroidal-Flows/code",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.pix.combinedvelocity.genjit",
-				"bootpath" : "~/Documents/Connor/Pratt-Torroidal/Torroidal-Flows/code",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.pix.inittex.genjit",
-				"bootpath" : "~/Documents/Connor/Pratt-Torroidal/Torroidal-Flows/code",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "torr.particles.maxpat",
-				"bootpath" : "~/Documents/Connor/Pratt-Torroidal/Torroidal-Flows/patchers",
+				"name" : "torr.velocity.visual.maxpat",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/patchers",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "torr.pix.particleflow.genjit",
-				"bootpath" : "~/Documents/Connor/Pratt-Torroidal/Torroidal-Flows/code",
-				"type" : "gJIT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "torr.pix.particleinit.genjit",
-				"bootpath" : "~/Documents/Connor/Pratt-Torroidal/Torroidal-Flows/code",
-				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
