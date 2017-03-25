@@ -132,7 +132,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 172.0, 231.0, 50.0, 62.0 ],
 					"style" : "",
-					"text" : "jit_gl_texture u951000635"
+					"text" : "jit_gl_texture u505001354"
 				}
 
 			}
@@ -690,54 +690,63 @@
 		"dependency_cache" : [ 			{
 				"name" : "torr.render.maxpat",
 				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/patchers",
+				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.syphon-input.maxpat",
 				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/patchers",
+				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.pix.inputmodification.genjit",
 				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
+				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.velocity.maxpat",
 				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/patchers",
+				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.pix.unperturbedvelocity.genjit",
 				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
+				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.pix.perturbedvelocity.genjit",
 				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
+				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.pix.combinedvelocity.genjit",
 				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
+				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.pix.inittex.genjit",
 				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
+				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.velocity.visual.maxpat",
 				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/patchers",
+				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
