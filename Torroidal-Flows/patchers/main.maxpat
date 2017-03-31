@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 284.0, 240.0, 931.0, 480.0 ],
+		"rect" : [ 2821.0, 79.0, 931.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,14 +38,53 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-26",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 28.0, 353.0, 113.0, 22.0 ],
+					"style" : "",
+					"text" : "prepend draw_type"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-21",
+					"maxclass" : "live.tab",
+					"num_lines_patching" : 2,
+					"num_lines_presentation" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "float" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 28.0, 258.0, 99.0, 78.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "live.tab",
+							"parameter_shortname" : "live.tab",
+							"parameter_type" : 2,
+							"parameter_enum" : [ "Vector", "Pointcaire" ],
+							"parameter_unitstyle" : 0
+						}
+
+					}
+,
+					"varname" : "live.tab"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-33",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 199.0, 132.0, 89.0, 22.0 ],
+					"patching_rect" : [ 199.0, 132.0, 82.0, 22.0 ],
 					"style" : "",
-					"text" : "position 0 0 50"
+					"text" : "position 0 0 5"
 				}
 
 			}
@@ -101,9 +140,9 @@
 				"box" : 				{
 					"id" : "obj-20",
 					"maxclass" : "newobj",
-					"numinlets" : 3,
+					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 82.0, 340.0, 187.0, 22.0 ],
+					"patching_rect" : [ 58.0, 411.0, 187.0, 22.0 ],
 					"style" : "",
 					"text" : "torr.velocity.visual @drawto flows"
 				}
@@ -132,7 +171,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 172.0, 231.0, 50.0, 62.0 ],
 					"style" : "",
-					"text" : "jit_gl_texture u505001354"
+					"text" : "jit_gl_texture u605003085"
 				}
 
 			}
@@ -445,10 +484,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-20", 2 ],
+					"destination" : [ "obj-20", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-1", 1 ]
+					"source" : [ "obj-1", 0 ]
 				}
 
 			}
@@ -580,6 +619,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-26", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-21", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -602,6 +650,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-26", 0 ]
 				}
 
 			}
@@ -661,15 +718,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-20", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-8", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-25", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -687,66 +735,61 @@
 
 			}
  ],
+		"parameters" : 		{
+			"obj-21" : [ "live.tab", "live.tab", 0 ]
+		}
+,
 		"dependency_cache" : [ 			{
 				"name" : "torr.render.maxpat",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/patchers",
-				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/patchers",
+				"bootpath" : "/Volumes/Seagate Backup Plus Drive/Synthesis/TorroidalFlows/Torroidal-Flows/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.syphon-input.maxpat",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/patchers",
-				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/patchers",
+				"bootpath" : "/Volumes/Seagate Backup Plus Drive/Synthesis/TorroidalFlows/Torroidal-Flows/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.pix.inputmodification.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
-				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
+				"bootpath" : "/Volumes/Seagate Backup Plus Drive/Synthesis/TorroidalFlows/Torroidal-Flows/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.velocity.maxpat",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/patchers",
-				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/patchers",
+				"bootpath" : "/Volumes/Seagate Backup Plus Drive/Synthesis/TorroidalFlows/Torroidal-Flows/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.pix.unperturbedvelocity.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
-				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
+				"bootpath" : "/Volumes/Seagate Backup Plus Drive/Synthesis/TorroidalFlows/Torroidal-Flows/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.pix.perturbedvelocity.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
-				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
+				"bootpath" : "/Volumes/Seagate Backup Plus Drive/Synthesis/TorroidalFlows/Torroidal-Flows/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.pix.combinedvelocity.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
-				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
+				"bootpath" : "/Volumes/Seagate Backup Plus Drive/Synthesis/TorroidalFlows/Torroidal-Flows/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.pix.inittex.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
-				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
+				"bootpath" : "/Volumes/Seagate Backup Plus Drive/Synthesis/TorroidalFlows/Torroidal-Flows/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.velocity.visual.maxpat",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/patchers",
-				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/patchers",
+				"bootpath" : "/Volumes/Seagate Backup Plus Drive/Synthesis/TorroidalFlows/Torroidal-Flows/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
