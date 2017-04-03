@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 3,
 			"revision" : 1,
-			"architecture" : "x86",
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 2022.0, 193.0, 877.0, 768.0 ],
+		"rect" : [ 824.0, 614.0, 845.0, 768.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,14 +38,27 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-66",
-					"maxclass" : "newobj",
+					"id" : "obj-9",
+					"maxclass" : "number",
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 375.0, 302.0, 55.0, 22.0 ],
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 268.0, 541.0, 50.0, 22.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 234.0, 602.0, 81.0, 22.0 ],
 					"style" : "",
-					"text" : "jit.matrix"
+					"text" : "line_width $1"
 				}
 
 			}
@@ -352,7 +365,7 @@
 							"major" : 7,
 							"minor" : 3,
 							"revision" : 1,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -545,7 +558,7 @@
 							"major" : 7,
 							"minor" : 3,
 							"revision" : 1,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -698,11 +711,11 @@
 							"major" : 7,
 							"minor" : 3,
 							"revision" : 1,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 2525.0, 130.0, 735.0, 671.0 ],
+						"rect" : [ 1012.0, 615.0, 735.0, 671.0 ],
 						"editing_bgcolor" : [ 0.9, 0.9, 0.9, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
@@ -756,7 +769,7 @@
 							}
 , 							{
 								"box" : 								{
-									"code" : "Param scale(1.,1.,1.);\r\n\r\n//calculate the x position\r\nrxDim = dim.x / 10;\r\ndx = cell.x % rxDim;\r\nx = ((dx / rxDim) *  2) - 1;\r\n\r\ndebug_x = dx * 100;\r\n\r\n//calculate the y position\r\ny = snorm.y;\r\n\r\n//calculate the y component for sampling in2\r\norig_y = norm.y;\r\n\r\n//calculate the z position\r\nz = floor(cell.x / rxDim);\r\n\r\ndebug_z = z * 10;\r\n\r\n//calculate where to sample in2 from\r\norig_x = debug_z + (dx);\r\norig_x = orig_x / 100;\r\n\r\n//finish calculating z position\r\nz = z / 9;\r\nz = (z * 2) - 1;\r\n\r\nvel_vec = sample(in2, vec(orig_x, orig_y));\r\npos = vec(x,y,z);\r\nvel = vec(vel_vec.r, vel_vec.g, vel_vec.b);\r\n\r\nnewPos = pos + (scale * vel);\r\n\r\nout2 = vec(newPos.r, newPos.g, newPos.b, 1);\r\nout1 = vec(x,y,z,1);\r\nout3 = vec(orig_x, debug_x, debug_z, 1);",
+									"code" : "Param scale(1.,1.,1.);\r\n\r\n//calculate the x position\r\nrxDim = dim.x / 10;\r\ndx = floor(cell.x) % rxDim;\r\nx = ((dx / 9) *  2) - 1;\r\n\r\ndebug_x = dx;\r\n\r\n//calculate the y position\r\ny = snorm.y;\r\n\r\n//calculate the y component for sampling in2\r\norig_y = norm.y;\r\n\r\n//calculate the z position\r\nz = floor(cell.x) / rxDim;\r\n\r\ndebug_z = z * 10;\r\n\r\n//calculate where to sample in2 from\r\norig_x = debug_z + (dx);\r\norig_x = orig_x / 100;\r\n\r\n//finish calculating z position\r\nz = z / 9;\r\nz = (z * 2) - 1;\r\n\r\nvel_vec = sample(in2, vec(orig_x, orig_y));\r\npos = vec(x,y,z);\r\nvel = vec(vel_vec.r, vel_vec.g, vel_vec.b);\r\n\r\nnewPos = pos + (scale * vel);\r\n\r\nout2 = vec(newPos.r, newPos.g, newPos.b, 1);\r\nout1 = vec(x,y,z,1);\r\nout3 = vec(orig_x, orig_y, debug_z, 1);",
 									"fontface" : 0,
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
@@ -1354,10 +1367,19 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-66", 0 ],
+					"destination" : [ "obj-15", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-6", 2 ]
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-9", 0 ]
 				}
 
 			}

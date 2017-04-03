@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 3,
 			"revision" : 1,
-			"architecture" : "x86",
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 2596.0, 173.0, 931.0, 480.0 ],
+		"rect" : [ 1238.0, 91.0, 1088.0, 546.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -631,55 +631,55 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "torr.render.maxpat",
-				"bootpath" : "/Volumes/Seagate Backup Plus Drive/Synthesis/TorroidalFlows/Torroidal-Flows/patchers",
+				"bootpath" : "~/Documents/Connor/Pratt-Torroidal/TorroidalFlows/Torroidal-Flows/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.syphon-input.maxpat",
-				"bootpath" : "/Volumes/Seagate Backup Plus Drive/Synthesis/TorroidalFlows/Torroidal-Flows/patchers",
+				"bootpath" : "~/Documents/Connor/Pratt-Torroidal/TorroidalFlows/Torroidal-Flows/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.pix.inputmodification.genjit",
-				"bootpath" : "/Volumes/Seagate Backup Plus Drive/Synthesis/TorroidalFlows/Torroidal-Flows/code",
+				"bootpath" : "~/Documents/Connor/Pratt-Torroidal/TorroidalFlows/Torroidal-Flows/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.velocity.maxpat",
-				"bootpath" : "/Volumes/Seagate Backup Plus Drive/Synthesis/TorroidalFlows/Torroidal-Flows/patchers",
+				"bootpath" : "~/Documents/Connor/Pratt-Torroidal/TorroidalFlows/Torroidal-Flows/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.pix.unperturbedvelocity.genjit",
-				"bootpath" : "/Volumes/Seagate Backup Plus Drive/Synthesis/TorroidalFlows/Torroidal-Flows/code",
+				"bootpath" : "~/Documents/Connor/Pratt-Torroidal/TorroidalFlows/Torroidal-Flows/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.pix.perturbedvelocity.genjit",
-				"bootpath" : "/Volumes/Seagate Backup Plus Drive/Synthesis/TorroidalFlows/Torroidal-Flows/code",
+				"bootpath" : "~/Documents/Connor/Pratt-Torroidal/TorroidalFlows/Torroidal-Flows/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.pix.combinedvelocity.genjit",
-				"bootpath" : "/Volumes/Seagate Backup Plus Drive/Synthesis/TorroidalFlows/Torroidal-Flows/code",
+				"bootpath" : "~/Documents/Connor/Pratt-Torroidal/TorroidalFlows/Torroidal-Flows/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.pix.inittex.genjit",
-				"bootpath" : "/Volumes/Seagate Backup Plus Drive/Synthesis/TorroidalFlows/Torroidal-Flows/code",
+				"bootpath" : "~/Documents/Connor/Pratt-Torroidal/TorroidalFlows/Torroidal-Flows/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.velocity.visual.maxpat",
-				"bootpath" : "/Volumes/Seagate Backup Plus Drive/Synthesis/TorroidalFlows/Torroidal-Flows/patchers",
+				"bootpath" : "~/Documents/Connor/Pratt-Torroidal/TorroidalFlows/Torroidal-Flows/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}

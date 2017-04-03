@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 3,
 			"revision" : 1,
-			"architecture" : "x86",
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 134.0, 76.0, 239.0, 535.0 ],
+		"rect" : [ 467.0, 455.0, 1574.0, 821.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -822,7 +822,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "recalculate" ],
 					"patching_rect" : [ 65.0, 4.0, 30.0, 30.0 ],
 					"style" : ""
 				}
@@ -1164,7 +1164,7 @@
 					"destination" : [ "obj-15", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 654.444458, 288.0, 468.0, 288.0, 468.0, 369.0, 200.5, 369.0 ],
+					"midpoints" : [ 654.444444, 288.0, 468.0, 288.0, 468.0, 369.0, 200.5, 369.0 ],
 					"source" : [ "obj-13", 1 ]
 				}
 
@@ -1174,7 +1174,7 @@
 					"destination" : [ "obj-16", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 666.888916, 288.0, 468.0, 288.0, 468.0, 396.0, 200.5, 396.0 ],
+					"midpoints" : [ 666.888889, 288.0, 468.0, 288.0, 468.0, 396.0, 200.5, 396.0 ],
 					"source" : [ "obj-13", 2 ]
 				}
 
@@ -1184,7 +1184,7 @@
 					"destination" : [ "obj-17", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 679.333313, 288.0, 468.0, 288.0, 468.0, 462.0, 177.0, 462.0, 177.0, 426.0, 200.5, 426.0 ],
+					"midpoints" : [ 679.333333, 288.0, 468.0, 288.0, 468.0, 462.0, 177.0, 462.0, 177.0, 426.0, 200.5, 426.0 ],
 					"source" : [ "obj-13", 3 ]
 				}
 
@@ -1194,7 +1194,7 @@
 					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 679.333313, 288.0, 537.0, 288.0, 537.0, 339.0, 611.5, 339.0 ],
+					"midpoints" : [ 679.333333, 288.0, 537.0, 288.0, 537.0, 339.0, 611.5, 339.0 ],
 					"source" : [ "obj-13", 3 ]
 				}
 
@@ -1204,7 +1204,7 @@
 					"destination" : [ "obj-19", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 741.555542, 288.0, 537.0, 288.0, 537.0, 429.0, 611.5, 429.0 ],
+					"midpoints" : [ 741.555556, 288.0, 537.0, 288.0, 537.0, 429.0, 611.5, 429.0 ],
 					"source" : [ "obj-13", 8 ]
 				}
 
@@ -1214,7 +1214,7 @@
 					"destination" : [ "obj-20", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 691.777771, 288.0, 537.0, 288.0, 537.0, 375.0, 611.5, 375.0 ],
+					"midpoints" : [ 691.777778, 288.0, 537.0, 288.0, 537.0, 375.0, 611.5, 375.0 ],
 					"source" : [ "obj-13", 4 ]
 				}
 
@@ -1224,7 +1224,7 @@
 					"destination" : [ "obj-21", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 716.666687, 288.0, 537.0, 288.0, 537.0, 456.0, 611.5, 456.0 ],
+					"midpoints" : [ 716.666667, 288.0, 537.0, 288.0, 537.0, 456.0, 611.5, 456.0 ],
 					"source" : [ "obj-13", 6 ]
 				}
 
@@ -1234,7 +1234,7 @@
 					"destination" : [ "obj-22", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 729.111084, 288.0, 537.0, 288.0, 537.0, 486.0, 611.5, 486.0 ],
+					"midpoints" : [ 729.111111, 288.0, 537.0, 288.0, 537.0, 486.0, 611.5, 486.0 ],
 					"source" : [ "obj-13", 7 ]
 				}
 
@@ -1244,7 +1244,7 @@
 					"destination" : [ "obj-68", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 704.222229, 288.0, 537.0, 288.0, 537.0, 402.0, 611.5, 402.0 ],
+					"midpoints" : [ 704.222222, 288.0, 537.0, 288.0, 537.0, 402.0, 611.5, 402.0 ],
 					"source" : [ "obj-13", 5 ]
 				}
 
@@ -1761,37 +1761,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "torr.pix.unperturbedvelocity.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
-				"type" : "gJIT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "torr.pix.perturbedvelocity.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
-				"type" : "gJIT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "torr.pix.combinedvelocity.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
-				"type" : "gJIT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "torr.pix.inittex.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Torroidal-Flows/code",
-				"type" : "gJIT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "o.route.mxo",
-				"type" : "iLaX"
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }
