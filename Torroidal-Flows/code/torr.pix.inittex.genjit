@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 3,
 			"revision" : 1,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 1246.0, 579.0, 478.0, 307.0 ],
+		"rect" : [ 2333.0, 455.0, 478.0, 307.0 ],
 		"editing_bgcolor" : [ 0.9, 0.9, 0.9, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -92,7 +92,7 @@
 			}
 , 			{
 				"box" : 				{
-					"code" : "//get the current x position\r\n//in absolute dimensions\r\nx = cell.x;\r\n//calculate how deep in z\r\n//the current cell should be\r\nz_coord = floor(x / z_depth);\r\n//normalize the value\r\nnorm_z = z_coord / z_depth;\r\n//send out the\r\n//initialized texture\r\nout1 = vec(0,0,0,norm_z);",
+					"code" : "//get the current x position\r\n//in absolute dimensions\r\nx = floor(cell.x);\r\n//calculate how deep in z\r\n//the current cell should be\r\nz_coord = floor(x / z_depth);\r\n//normalize the value\r\nnorm_z = z_coord / z_depth;\r\n//send out the\r\n//initialized texture\r\nout1 = vec(0,0,0,norm_z);",
 					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,

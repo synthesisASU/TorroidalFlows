@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 3,
 			"revision" : 1,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 561.0, 447.0, 1031.0, 858.0 ],
+		"rect" : [ 34.0, 79.0, 1372.0, 783.0 ],
 		"editing_bgcolor" : [ 0.9, 0.9, 0.9, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -263,7 +263,7 @@
 			}
 , 			{
 				"box" : 				{
-					"code" : "//get the cartesian coordinates of the point\r\n//x = snorm.x; No longer correct\r\ny = snorm.y;\r\nz = in1.a; //value stored in alpha channel\r\n\r\n/* X FETCH UPDATE */\r\n\r\n//first calculate real size of x dimension : real x = xDim / zDim;\r\nrXDim = dim.x / z_depth;\r\n//get the position within the actual x dimension\r\ndx = cell.x % rXDim;\r\n//calculate the signed-normalized version of the coordinate\r\nx = ((dx / rXDim) * 2) - 1; \r\n\r\n/* END X FETCH UPDATE */\r\n\r\n//compute small r (distance from center on this horizontal plane)\r\nr = sqrt(pow(x, 2) + pow(y, 2));\r\n\r\n//compute u\r\nu1 = ((overturning_circulation * -1) * x) * (1 - (2 * z) * ((Radius - r) / 3));\r\nu2 = (horizontal_swirl * y) * (rotation_deviance + pow(z, 2));\r\n\r\nu = u1 - u2;\r\n\r\n//compute v\r\nv1 = ((overturning_circulation * -1) * x) * (1 - (2 * z) * ((Radius - r) / 3));\r\nv2 = (horizontal_swirl * x) * (rotation_deviance + pow(z, 2));\r\n\r\nv = v1 + v2;\r\n\r\n//compute w\r\nw = (overturning_circulation * z) * (1 - z) * (((2 * Radius) / 3) - r);\r\n\r\nout1 = vec(u,v,w,in1.a); //alpha is normalized z coordinate",
+					"code" : "//get the cartesian coordinates of the point\r\n//x = snorm.x; No longer correct\r\ny = snorm.y;\r\nz = in1.a; //value stored in alpha channel\r\n\r\n/* X FETCH UPDATE */\r\n\r\n//first calculate real size of x dimension : real x = xDim / zDim;\r\nrXDim = dim.x / z_depth;\r\n//get the position within the actual x dimension\r\ndx = floor(cell.x) % rXDim;\r\n//calculate the signed-normalized version of the coordinate\r\nx = ((dx / rXDim) * 2) - 1; \r\n\r\n/* END X FETCH UPDATE */\r\n\r\n//compute small r (distance from center on this horizontal plane)\r\nr = sqrt(pow(x, 2) + pow(y, 2));\r\n\r\n//compute u\r\nu1 = ((overturning_circulation * -1) * x) * (1 - (2 * z) * ((Radius - r) / 3));\r\nu2 = (horizontal_swirl * y) * (rotation_deviance + pow(z, 2));\r\n\r\nu = u1 - u2;\r\n\r\n//compute v\r\nv1 = ((overturning_circulation * -1) * x) * (1 - (2 * z) * ((Radius - r) / 3));\r\nv2 = (horizontal_swirl * x) * (rotation_deviance + pow(z, 2));\r\n\r\nv = v1 + v2;\r\n\r\n//compute w\r\nw = (overturning_circulation * z) * (1 - z) * (((2 * Radius) / 3) - r);\r\n\r\nout1 = vec(u,v,w,in1.a); //alpha is normalized z coordinate",
 					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -373,8 +373,7 @@
 				}
 
 			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }

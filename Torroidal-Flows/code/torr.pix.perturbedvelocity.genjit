@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 3,
 			"revision" : 1,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 431.0, 110.0, 1444.0, 796.0 ],
+		"rect" : [ 27.0, 79.0, 1444.0, 796.0 ],
 		"editing_bgcolor" : [ 0.9, 0.9, 0.9, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -212,7 +212,7 @@
 			}
 , 			{
 				"box" : 				{
-					"code" : "//get cartesian coords that we need\r\n//x = snorm.x; No longer valid\r\ny = snorm.y;\r\nz = in1.a;\r\n\r\n/* X FETCH UPDATE */\r\n\r\n//first calculate real size of x dimension : real x = xDim / zDim;\r\nrXDim = dim.x / z_depth;\r\n//get the position within the actual x dimension\r\ndx = cell.x % rXDim;\r\n//calculate the signed-normalized version of the coordinate\r\nx = ((dx / rXDim) * 2) - 1; \r\n\r\n/* END X FETCH UPDATE */\r\n\r\n//check if Epsilon has a value != 0 and that the final expression != 0\r\nif(perturbation_strength != 0 && (1 - (vertical_variation * z)) != 0)\r\n{\r\n\t//calculate distance from center on horizontal plane\r\n\tr = sqrt(pow(x, 2) + pow(y, 2));\r\n\t\r\n\t//calculate U\r\n\tu1 = (y * (y - asymmetry_degree)) + (time_strength * cos(timestep)) - ((pow(Radius, 2) - pow(r, 2)) / 2);\r\n\tu = u1 * perturbation_strength * (1 - (vertical_variation * z));\r\n\t\r\n\t//calculate V\r\n\tv1 = (y - asymmetry_degree) + (time_strength * cos(timestep));\r\n\tv = v1 * (perturbation_strength * x) * (1 - (vertical_variation * z));\r\n\t\r\n\t//no portion for w component\r\n\tout1 = vec(u,v,0,in1.a); //alpha value stores z coordinate\r\n}\r\nelse //one of the terms was a zero, so skip the main bulk of the equation\r\n{\r\n\tout1 = vec(0,0,0,in1.a); //keep z value in alpha\r\n}",
+					"code" : "//get cartesian coords that we need\r\n//x = snorm.x; No longer valid\r\ny = snorm.y;\r\nz = in1.a;\r\n\r\n/* X FETCH UPDATE */\r\n\r\n//first calculate real size of x dimension : real x = xDim / zDim;\r\nrXDim = dim.x / z_depth;\r\n//get the position within the actual x dimension\r\ndx = floor(cell.x) % rXDim;\r\n//calculate the signed-normalized version of the coordinate\r\nx = ((dx / rXDim) * 2) - 1; \r\n\r\n/* END X FETCH UPDATE */\r\n\r\n//check if Epsilon has a value != 0 and that the final expression != 0\r\nif(perturbation_strength != 0 && (1 - (vertical_variation * z)) != 0)\r\n{\r\n\t//calculate distance from center on horizontal plane\r\n\tr = sqrt(pow(x, 2) + pow(y, 2));\r\n\t\r\n\t//calculate U\r\n\tu1 = (y * (y - asymmetry_degree)) + (time_strength * cos(timestep)) - ((pow(Radius, 2) - pow(r, 2)) / 2);\r\n\tu = u1 * perturbation_strength * (1 - (vertical_variation * z));\r\n\t\r\n\t//calculate V\r\n\tv1 = (y - asymmetry_degree) + (time_strength * cos(timestep));\r\n\tv = v1 * (perturbation_strength * x) * (1 - (vertical_variation * z));\r\n\t\r\n\t//no portion for w component\r\n\tout1 = vec(u,v,0,in1.a); //alpha value stores z coordinate\r\n}\r\nelse //one of the terms was a zero, so skip the main bulk of the equation\r\n{\r\n\tout1 = vec(0,0,0,in1.a); //keep z value in alpha\r\n}",
 					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -370,8 +370,7 @@
 				}
 
 			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }
