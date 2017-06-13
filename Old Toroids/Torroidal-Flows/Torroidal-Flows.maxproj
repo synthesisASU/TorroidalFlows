@@ -2,8 +2,8 @@
 	"name" : "Torroidal-Flows",
 	"version" : 1,
 	"creationdate" : -725573070,
-	"modificationdate" : -717866809,
-	"viewrect" : [ 27.0, 71.0, 300.0, 500.0 ],
+	"modificationdate" : -716922395,
+	"viewrect" : [ 58.0, 65.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -36,12 +36,27 @@
 				"local" : 1
 			}
 ,
+			"torr.curve.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"torr.particles.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
-			"torr.curve.maxpat" : 			{
+			"Turtle-Integration.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"torr.parameters.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
+			"torr.int.particle.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
