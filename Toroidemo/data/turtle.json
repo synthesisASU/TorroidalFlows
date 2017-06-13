@@ -421,6 +421,41 @@
 				}
 
 			}
+,
+			"13" : 			{
+				"id" : 13,
+				"data" : 				{
+					"torr.render::interval" : [ 16 ],
+					"torr.render::enable" : [ 1 ],
+					"torr.render::fullscreen" : [ 0 ],
+					"torr.render::fps" : [ 60.0 ],
+					"torr.render::fsmenubar" : [ 0 ],
+					"torr.render::erase_color" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"torr.render::output_texture" : [ 0 ],
+					"torr.render::output_matrix" : [ 0 ],
+					"torr.particles::dim" : [ 100, 100 ],
+					"torr.particles::invert" : [ 1.0 ],
+					"torr.particles::slideUp" : [ 10.0 ],
+					"torr.particles::slideDown" : [ 50.0 ],
+					"torr.particles::slide_enable" : [ 1 ],
+					"torr.particles::cameraZ" : [ 2.77 ],
+					"torr.particles::zPos" : [ 0.5 ],
+					"torr.particles::pointmode" : [ 1.0 ],
+					"torr.particles::colormode" : [ 0.0 ],
+					"torr.particles::point_size" : [ 1.0 ],
+					"torr.particles::stepSize" : [ 0.1 ],
+					"torr.particles::axes-enable" : [ 0 ],
+					"torr.particles::bloom_enable" : [ 1 ],
+					"torr.particles::bloom_amt" : [ 3.0 ],
+					"torr.particles::blur_width" : [ 0.5, 0.0 ],
+					"torr.particles::threshold" : [ 0.6 ],
+					"torr.particles::horiz-swirl" : [ 1.0 ],
+					"torr.particles::overturning" : [ 1.0 ],
+					"torr.particles::deviation" : [ 0.1 ],
+					"torr.particles::radius" : [ 1.0 ]
+				}
+
+			}
 
 		}
 
