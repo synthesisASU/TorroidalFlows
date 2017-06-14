@@ -2,7 +2,7 @@
 	"name" : "Toroidemo",
 	"version" : 1,
 	"creationdate" : -715242362,
-	"modificationdate" : -715174246,
+	"modificationdate" : -714731374,
 	"viewrect" : [ 25.0, 70.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -40,6 +40,11 @@
 			}
 ,
 			"torr.particle.colors.genjit" : 			{
+				"kind" : "genjit",
+				"local" : 1
+			}
+,
+			"torr.particle.perturbed.genjit" : 			{
 				"kind" : "genjit",
 				"local" : 1
 			}

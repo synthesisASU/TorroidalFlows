@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 3,
 			"revision" : 1,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 543.0, 145.0, 840.0, 641.0 ],
+		"rect" : [ 1748.0, 119.0, 840.0, 641.0 ],
 		"editing_bgcolor" : [ 0.9, 0.9, 0.9, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -118,13 +118,13 @@
 			}
 , 			{
 				"box" : 				{
-					"code" : "x = in1.r;\r\ny = in1.g;\r\nz = in1.b;\r\n\r\n//get XY distance from center\r\ncenterDist = sqrt(pow(x,2) + pow(y,2));\r\n\r\n//calculate the U component\r\nu = (-1 * b) * x; // -bx\r\nu = u * (1 - (2 * z)); // -bx(1-2z)\r\nu = u * ((radius - centerDist) / 3); //-bx(1-2z)((R-r) / 3)\r\nu = u - ((a * y) * (c + pow(z,2)));//-bx(1-2z)((R-r) / 3) - ay(c + z^2)\r\n\r\n//calculate the V component\r\nv = (-1 * b) * y; //-by\r\nv = v * (1 - (2 * z)); //-by(1-2z)\r\nv = v * ((radius - centerDist) / 3); //-by(1-2z)((R-r)/3)\r\nv = v + ((a * x) * (c + pow(z, 2))); //-by(1-2z)((R-r)/3) + ax(c + z^2)\r\n\r\n//calculate the W component\r\nw = b * z; //bz\r\nw = w * (1 - z); //bz(1-z)\r\nw = w * (((2 * radius) / 3) - centerDist); //bz(1-z)(((2R)/3)-r)\r\n\r\n//get the new position from the velocity * step size\r\nnewX = x + (u * stepSize);\r\nnewY = y + (v * stepSize);\r\nnewZ = z + (w * stepSize);\r\n\r\nnewDist = sqrt(pow(newX, 2) + pow(newY, 2));\r\n\r\nif(newDist > radius) {\r\n\ttheta = atan2(newY, newX);\r\n\tnewX = (radius * 0.95) * cos(theta);\r\n\tnewY = (radius * 0.95) * sin(theta);\r\n}\r\n\r\nout1 = vec(newX,newY,newZ,1);",
+					"code" : "//get the particle positions\r\nx = in1.r;\r\ny = in1.g;\r\nz = in1.b;\r\n\r\n//get the perturbation components\r\npu = in2.r;\r\npv = in2.g;\r\n//no pertubed w component\r\n\r\n//get XY distance from center\r\ncenterDist = sqrt(pow(x,2) + pow(y,2));\r\n\r\n//calculate the U component\r\nu = (-1 * b) * x; // -bx\r\nu = u * (1 - (2 * z)); // -bx(1-2z)\r\nu = u * ((radius - centerDist) / 3); //-bx(1-2z)((R-r) / 3)\r\nu = u - ((a * y) * (c + pow(z,2)));//-bx(1-2z)((R-r) / 3) - ay(c + z^2)\r\n\r\n//calculate the V component\r\nv = (-1 * b) * y; //-by\r\nv = v * (1 - (2 * z)); //-by(1-2z)\r\nv = v * ((radius - centerDist) / 3); //-by(1-2z)((R-r)/3)\r\nv = v + ((a * x) * (c + pow(z, 2))); //-by(1-2z)((R-r)/3) + ax(c + z^2)\r\n\r\n//calculate the W component\r\nw = b * z; //bz\r\nw = w * (1 - z); //bz(1-z)\r\nw = w * (((2 * radius) / 3) - centerDist); //bz(1-z)(((2R)/3)-r)\r\n\r\n//get the new position from the velocity * step size\r\nnewX = x + ((u + pu) * stepSize);\r\nnewY = y + ((v - pv) * stepSize);\r\nnewZ = z + (w * stepSize);\r\n\r\nnewDist = sqrt(pow(newX, 2) + pow(newY, 2));\r\n\r\nif(newDist > radius) {\r\n\ttheta = atan2(newY, newX);\r\n\tnewX = (radius * 0.95) * cos(theta);\r\n\tnewY = (radius * 0.95) * sin(theta);\r\n}\r\n\r\nout1 = vec(newX,newY,newZ,1);",
 					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-5",
 					"maxclass" : "codebox",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 23.0, 45.0, 607.0, 487.0 ],
@@ -173,6 +173,15 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-5", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -189,7 +198,8 @@
 				}
 
 			}
- ]
+ ],
+		"autosave" : 0
 	}
 
 }
