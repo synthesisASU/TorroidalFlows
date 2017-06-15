@@ -38,6 +38,19 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-191",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 645.0, 788.0, 150.0, 33.0 ],
+					"style" : "",
+					"text" : "Resets to 0 after processing"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-203",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -295,45 +308,6 @@
 					"style" : "",
 					"text" : "pattr tracer-enable @bindto tracer-mesh::enable @initial 0",
 					"varname" : "tracer-enable"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-192",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 535.0, 777.0, 24.0, 22.0 ],
-					"style" : "",
-					"text" : "t b"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-191",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 668.0, 785.5, 68.0, 22.0 ],
-					"style" : "",
-					"text" : "r #0-dim"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-190",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 535.0, 838.0, 184.0, 22.0 ],
-					"style" : "",
-					"text" : "jit.matrix 3 float32 10 10 @thru 0"
 				}
 
 			}
@@ -1208,8 +1182,8 @@
 					"id" : "obj-178",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "jit_gl_texture", "" ],
+					"numoutlets" : 3,
+					"outlettype" : [ "jit_gl_texture", "jit_gl_texture", "" ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
@@ -1250,15 +1224,27 @@
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
-									"code" : "//check the adjustment tex for a \r\n//user input position\r\nx = in2.r;\r\ny = in2.g;\r\nz = in2.b;\r\n\r\n//output the new position if there is one\r\nif(x != 0. || y != 0. || z != 0.) {\r\n\tout1 = in2;\r\n} else {\r\n\tout1 = in1;\r\n}",
+									"id" : "obj-3",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 318.0, 416.0, 37.0, 22.0 ],
+									"style" : "",
+									"text" : "out 2"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"code" : "//check the adjustment tex for a \r\n//user input position\r\nx = in2.r;\r\ny = in2.g;\r\nz = in2.b;\r\n\r\n//output the new position if there is one\r\nif(x != 0. || y != 0. || z != 0.) {\r\n\tout1 = in2;\r\n} else {\r\n\tout1 = in1;\r\n}\r\n\r\nout2 = vec(0,0,0,1);",
 									"fontface" : 0,
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-9",
 									"maxclass" : "codebox",
 									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 50.0, 287.0, 267.0 ],
 									"style" : ""
 								}
@@ -1342,6 +1328,15 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-9", 1 ]
 								}
 
 							}
@@ -5399,10 +5394,11 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-192", 0 ],
+					"destination" : [ "obj-181", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-178", 0 ]
+					"midpoints" : [ 643.0, 780.0, 762.0, 780.0, 762.0, 741.0, 729.0, 741.0, 729.0, 714.0, 741.5, 714.0 ],
+					"source" : [ "obj-178", 1 ]
 				}
 
 			}
@@ -5515,33 +5511,6 @@
 					"hidden" : 0,
 					"midpoints" : [ 413.5, 204.0, 390.0, 204.0, 390.0, 240.0, 413.5, 240.0 ],
 					"source" : [ "obj-19", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-181", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-190", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-190", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-191", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-190", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-192", 0 ]
 				}
 
 			}
