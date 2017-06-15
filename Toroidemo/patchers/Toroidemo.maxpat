@@ -38,6 +38,19 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-9",
+					"linecount" : 13,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 265.0, 657.0, 242.0, 181.0 ],
+					"style" : "",
+					"text" : "Tracer Particle Input: (left inlet of bpatcher)\n\nsend the message tracer followed by 3 floats to set the posiition of the tracer (\"tracer 0. 0. 0.5\")\n\nsend the message tracer with argument add (\"tracer add\") to add that point to the simulation\n\nsend the message tracer with argument enable to toggle rendered preview of tracer position (\"tracer enable\")"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-38",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -203,21 +216,6 @@
 			}
 , 			{
 				"box" : 				{
-					"fontface" : 0,
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-6",
-					"maxclass" : "jit.fpsgui",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 430.0, 202.0, 80.0, 35.0 ],
-					"style" : ""
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-42",
 					"linecount" : 2,
 					"maxclass" : "comment",
@@ -239,7 +237,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 76.0, 212.0, 150.0, 33.0 ],
+					"patching_rect" : [ 76.0, 196.0, 150.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 409.0, 45.0, 158.0, 20.0 ],
 					"style" : "",
@@ -253,7 +251,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 74.0, 186.0, 150.0, 20.0 ],
+					"patching_rect" : [ 76.0, 77.0, 150.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 409.0, 16.0, 150.0, 20.0 ],
 					"style" : "",
@@ -535,15 +533,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-17", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -791,37 +780,50 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "torr.render.maxpat",
-				"bootpath" : "~/Documents/Max 7/Projects/Toroidemo/patchers",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/patchers",
+				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Toroidemo/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.particles.maxpat",
-				"bootpath" : "~/Documents/Max 7/Projects/Toroidemo/patchers",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/patchers",
+				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Toroidemo/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.particle.velocity.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/Toroidemo/code",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.particle.positions.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/Toroidemo/code",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.particle.colors.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/Toroidemo/code",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"type" : "gJIT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "torr.particle.perturbed.genjit",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "turtle.json",
-				"bootpath" : "~/Documents/Max 7/Projects/Toroidemo/data",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/data",
+				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 7/Projects/TorroidalFlows/Toroidemo/data",
 				"type" : "JSON",
 				"implicit" : 1
 			}
