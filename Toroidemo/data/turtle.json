@@ -38,7 +38,8 @@
 					"torr.particles::vert-strength" : [ 0.5 ],
 					"torr.particles::time-dep" : [ 0.1 ],
 					"torr.particles::sigma" : [ 0.1 ],
-					"torr.particles::t" : [ 0.1 ]
+					"torr.particles::t" : [ 0.1 ],
+					"torr.particles::tracer-enable" : [  ]
 				}
 
 			}
@@ -79,7 +80,8 @@
 					"torr.particles::vert-strength" : [ 0.5 ],
 					"torr.particles::time-dep" : [ 0.1 ],
 					"torr.particles::sigma" : [ 0.1 ],
-					"torr.particles::t" : [ 0.1 ]
+					"torr.particles::t" : [ 0.1 ],
+					"torr.particles::tracer-enable" : [  ]
 				}
 
 			}
@@ -120,7 +122,8 @@
 					"torr.particles::vert-strength" : [ 0.5 ],
 					"torr.particles::time-dep" : [ 0.1 ],
 					"torr.particles::sigma" : [ 0.1 ],
-					"torr.particles::t" : [ 0.1 ]
+					"torr.particles::t" : [ 0.1 ],
+					"torr.particles::tracer-enable" : [  ]
 				}
 
 			}
@@ -161,7 +164,8 @@
 					"torr.particles::vert-strength" : [ 0.5 ],
 					"torr.particles::time-dep" : [ 0.1 ],
 					"torr.particles::sigma" : [ 0.1 ],
-					"torr.particles::t" : [ 0.1 ]
+					"torr.particles::t" : [ 0.1 ],
+					"torr.particles::tracer-enable" : [  ]
 				}
 
 			}
@@ -202,7 +206,8 @@
 					"torr.particles::vert-strength" : [ 0.5 ],
 					"torr.particles::time-dep" : [ 0.1 ],
 					"torr.particles::sigma" : [ 0.1 ],
-					"torr.particles::t" : [ 0.1 ]
+					"torr.particles::t" : [ 0.1 ],
+					"torr.particles::tracer-enable" : [  ]
 				}
 
 			}
@@ -243,7 +248,8 @@
 					"torr.particles::vert-strength" : [ 0.5 ],
 					"torr.particles::time-dep" : [ 0.1 ],
 					"torr.particles::sigma" : [ 0.1 ],
-					"torr.particles::t" : [ 0.1 ]
+					"torr.particles::t" : [ 0.1 ],
+					"torr.particles::tracer-enable" : [  ]
 				}
 
 			}
@@ -284,7 +290,8 @@
 					"torr.particles::vert-strength" : [ 0.5 ],
 					"torr.particles::time-dep" : [ 0.1 ],
 					"torr.particles::sigma" : [ 0.1 ],
-					"torr.particles::t" : [ 0.1 ]
+					"torr.particles::t" : [ 0.1 ],
+					"torr.particles::tracer-enable" : [  ]
 				}
 
 			}
@@ -325,7 +332,8 @@
 					"torr.particles::vert-strength" : [ 0.5 ],
 					"torr.particles::time-dep" : [ 0.1 ],
 					"torr.particles::sigma" : [ 0.1 ],
-					"torr.particles::t" : [ 0.1 ]
+					"torr.particles::t" : [ 0.1 ],
+					"torr.particles::tracer-enable" : [  ]
 				}
 
 			}
@@ -366,7 +374,8 @@
 					"torr.particles::vert-strength" : [ 0.5 ],
 					"torr.particles::time-dep" : [ 0.1 ],
 					"torr.particles::sigma" : [ 0.1 ],
-					"torr.particles::t" : [ 0.1 ]
+					"torr.particles::t" : [ 0.1 ],
+					"torr.particles::tracer-enable" : [  ]
 				}
 
 			}
@@ -407,7 +416,8 @@
 					"torr.particles::vert-strength" : [ 0.5 ],
 					"torr.particles::time-dep" : [ 0.1 ],
 					"torr.particles::sigma" : [ 0.1 ],
-					"torr.particles::t" : [ 0.1 ]
+					"torr.particles::t" : [ 0.1 ],
+					"torr.particles::tracer-enable" : [  ]
 				}
 
 			}
@@ -448,7 +458,8 @@
 					"torr.particles::vert-strength" : [ 0.5 ],
 					"torr.particles::time-dep" : [ 0.1 ],
 					"torr.particles::sigma" : [ 0.1 ],
-					"torr.particles::t" : [ 0.1 ]
+					"torr.particles::t" : [ 0.1 ],
+					"torr.particles::tracer-enable" : [  ]
 				}
 
 			}
@@ -489,7 +500,8 @@
 					"torr.particles::vert-strength" : [ 0.5 ],
 					"torr.particles::time-dep" : [ 0.1 ],
 					"torr.particles::sigma" : [ 0.1 ],
-					"torr.particles::t" : [ 0.1 ]
+					"torr.particles::t" : [ 0.1 ],
+					"torr.particles::tracer-enable" : [  ]
 				}
 
 			}
@@ -530,7 +542,8 @@
 					"torr.particles::vert-strength" : [ 0.5 ],
 					"torr.particles::time-dep" : [ 0.1 ],
 					"torr.particles::sigma" : [ 0.1 ],
-					"torr.particles::t" : [ 0.1 ]
+					"torr.particles::t" : [ 0.1 ],
+					"torr.particles::tracer-enable" : [  ]
 				}
 
 			}
@@ -571,7 +584,8 @@
 					"torr.particles::vert-strength" : [ 0.5 ],
 					"torr.particles::time-dep" : [ 0.1 ],
 					"torr.particles::sigma" : [ 0.1 ],
-					"torr.particles::t" : [ 0.1 ]
+					"torr.particles::t" : [ 0.1 ],
+					"torr.particles::tracer-enable" : [  ]
 				}
 
 			}
@@ -612,7 +626,8 @@
 					"torr.particles::vert-strength" : [ 0.5 ],
 					"torr.particles::time-dep" : [ 0.1 ],
 					"torr.particles::sigma" : [ 0.1 ],
-					"torr.particles::t" : [ 0.1 ]
+					"torr.particles::t" : [ 0.1 ],
+					"torr.particles::tracer-enable" : [  ]
 				}
 
 			}
