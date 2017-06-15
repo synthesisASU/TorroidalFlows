@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 749.0, 79.0, 640.0, 750.0 ],
+		"rect" : [ 474.0, 56.0, 640.0, 750.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -198,21 +198,6 @@
 					"patching_rect" : [ 289.0, 1008.0, 55.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.matrix"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontface" : 0,
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-6",
-					"maxclass" : "jit.fpsgui",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 430.0, 202.0, 80.0, 35.0 ],
-					"style" : ""
 				}
 
 			}
@@ -535,15 +520,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-17", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -757,6 +733,7 @@
 					"destination" : [ "obj-34", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 301.5, 570.0, 333.0, 570.0, 333.0, 546.0, 426.0, 546.0, 426.0, 411.0, 531.0, 411.0, 531.0, 15.0, 256.166656, 15.0 ],
 					"source" : [ "obj-36", 0 ]
 				}
 
@@ -766,6 +743,7 @@
 					"destination" : [ "obj-35", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 383.5, 537.0, 426.0, 537.0, 426.0, 411.0, 531.0, 411.0, 531.0, 90.0, 276.0, 90.0, 276.0, 54.0, 298.5, 54.0 ],
 					"source" : [ "obj-38", 0 ]
 				}
 
@@ -791,37 +769,43 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "torr.render.maxpat",
-				"bootpath" : "~/Documents/Max 7/Projects/Toroidemo/patchers",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.particles.maxpat",
-				"bootpath" : "~/Documents/Max 7/Projects/Toroidemo/patchers",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.particle.velocity.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/Toroidemo/code",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.particle.positions.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/Toroidemo/code",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "torr.particle.colors.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/Toroidemo/code",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"type" : "gJIT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "torr.particle.perturbed.genjit",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
 				"type" : "gJIT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "turtle.json",
-				"bootpath" : "~/Documents/Max 7/Projects/Toroidemo/data",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/data",
 				"type" : "JSON",
 				"implicit" : 1
 			}
