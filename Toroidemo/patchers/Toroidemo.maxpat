@@ -39,13 +39,13 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-9",
-					"linecount" : 13,
+					"linecount" : 17,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 265.0, 657.0, 242.0, 181.0 ],
+					"patching_rect" : [ 265.0, 657.0, 252.0, 234.0 ],
 					"style" : "",
-					"text" : "Tracer Particle Input: (left inlet of bpatcher)\n\nsend the message tracer followed by 3 floats to set the posiition of the tracer (\"tracer 0. 0. 0.5\")\n\nsend the message tracer with argument add (\"tracer add\") to add that point to the simulation\n\nsend the message tracer with argument enable to toggle rendered preview of tracer position (\"tracer enable\")"
+					"text" : "Tracer Particle Input: (left inlet of bpatcher)\n\nsend the message tracer followed by 3 floats to set the posiition of the tracer (\"tracer 0. 0. 0.5\")\n\nsend the message tracer with argument add (\"tracer add\") to add that point to the simulation\n\nsend the message tracer with argument enable to toggle rendered preview of tracer position (\"tracer enable\")\n\nsend the message tracer with argument clear to set all particles to the origin point of the simulation (0,0,0) (\"tracer clear\")"
 				}
 
 			}
