@@ -45,16 +45,45 @@ The position in the z dimension at which the initial plane of points will be dra
 Determines whether points will be initialized in a plane or a cube. When ON, particles will be initialized on a plane. When OFF, points will reside within a cube.
 
 ### colormode
-Determines the colorization of the particles. When ON, colors will be initialized based on x,y,z coordinates when the simulation is started. When OFF, colors will be based on x,y,x*y coordinates when the simulation is started. Colors do not change over time, and will remain constant based on the initial formula.
-
-### stepSize
-This parameter is similar to the TimeStep in other PDEs. 
+Determines the colorization of the particles. When ON, colors will be initialized based on x,y,z coordinates when the simulation is started. When OFF, colors will be based on x,y,x*y coordinates when the simulation is started. Colors do not change over time, and will remain constant based on the initial formula. 
 
 ### zPosition
 The distance of the camera in the openGL context from the origin point of the simulation.
 
 ### point_size
 How large the particles in the simulation will be drawn.
+
+
+## Unperturbed Model Parameters
+
+### stepSize
+This parameter is similar to the TimeStep in other PDEs.
+
+### radius
+The XY Width of the simulation (Z is always of length 1)
+
+### horizontal swirl
+The velocity of particles moving on the surface of the tori in the XY plane
+
+### overturning circulation
+The velocity of particles moving in the Z axis
+
+### deviation
+The degree of deviation from solid body rotation when unperturbed
+
+## Perturbation Model Parameters
+
+### p Strength
+The degree to which the perturbation effects the overall flow (0 is no perturbation)
+
+### asymmetry
+The degree to which the model centers away from the origin of the simulation
+
+### vertical strength
+The degree of variance in the vertical direction
+
+### time dependent
+The strength of the time dependent portion of the perturbation.
 
 ## Post-Processing Parameters
 
@@ -85,5 +114,24 @@ When on, the colors of the openGL scene are inverted (photo-negative)
 ### Axes Enable
 When on, the X, Y, and Z axes are drawn in the scene for visual reference. (X is Red, Y is Green, Z is Blue)
 
-## Model Parameters
+## Tracer Parameters
+
+### X Position
+The position of tracer particle starting positions on the X axis
+
+### Y Position
+The position of tracer particle starting positions on the Y axis
+
+### Z Position
+The position of tracer particle starting positions on the Z axis
+
+### Tracer Enable
+Determines whether to draw a preview of the current tracer starting position
+
+### Add Point
+Press this button to add a tracer to the simulation (or by pressing space on the keyboard)
+
+### Set All Points To Origin
+Press to clear all particles by setting their position to be at the origin of the simulation (black hole case) or by pressing w on the keyboard.
+
 

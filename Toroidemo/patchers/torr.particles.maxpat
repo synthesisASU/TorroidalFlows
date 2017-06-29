@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 222.0, 80.0, 1106.0, 776.0 ],
+		"rect" : [ 125.0, 87.0, 1106.0, 776.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -5567,6 +5567,7 @@
 				"box" : 				{
 					"attr" : "enable",
 					"id" : "obj-138",
+					"lock" : 1,
 					"maxclass" : "attrui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
