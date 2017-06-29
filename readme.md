@@ -30,7 +30,9 @@ Tracer Particle Controls
 
 Presets can be called up by typing the number and hitting enter. (Only available on numpad currently)
 
-## Explanation of Parameters
+# Explanation of Parameters
+
+## General Parameters
 
 ### dim 
 The number of particles used in the simulation.
@@ -39,13 +41,49 @@ The count should not exceed 1,000,000 (1000x1000) except on high-end computers. 
 ### zPos
 The position in the z dimension at which the initial plane of points will be drawn. This parameter is only in effect when point mode is toggled on.
 
-pointmode - Determines whether points will be initialized in a plane or a cube. When 	ON, particles will be initialized on a plane. When OFF, points will reside 		within a cube.
+### pointmode
+Determines whether points will be initialized in a plane or a cube. When ON, particles will be initialized on a plane. When OFF, points will reside within a cube.
 
-colormode - Determines the colorization of the particles. When ON, colors will be 		initialized based on x,y,z coordinates when the simulation is started. When 	OFF, colors will be based on x,y,x*y coordinates when the simulation is 		started. Colors do not change over time, and will remain constant based on 		the initial formula.
+### colormode
+Determines the colorization of the particles. When ON, colors will be initialized based on x,y,z coordinates when the simulation is started. When OFF, colors will be based on x,y,x*y coordinates when the simulation is started. Colors do not change over time, and will remain constant based on the initial formula.
 
-stepSize - This parameter is similar to the TimeStep in other PDEs. 
+### stepSize
+This parameter is similar to the TimeStep in other PDEs. 
 
-zPosition - The distance of the camera in the openGL context from the origin point of 	the simulation.
+### zPosition
+The distance of the camera in the openGL context from the origin point of the simulation.
 
-point_size - How large the particles in the simulation will be drawn.
+### point_size
+How large the particles in the simulation will be drawn.
+
+## Post-Processing Parameters
+
+### Bloom Enable
+Controls whether the bloom post processing effect will be used. The Bloom effect creates both a blur and a sense that an object is emitting light. This parameter should always stay on! To remove the bloom effect, set the threshold value to be above 1.0.
+
+### bloom_amt
+Determines to what degree the bloom effect will radiate color away from the original object. The default is 1, a value less than 1 will make objects appear dim, while a value approaching 2 will cause all objects to appear washed out.
+
+### blur_width
+Determines how much blurring / smoothing should be applied to objects in the scene
+
+### threshold
+Determines the luminosity of an object before the bloom effect is applied. Setting this parameter to a value above 1 is he best way to remove the bloom effect from the scene. As the value approaches 0, more of the scene will be included in the bloom effect.
+
+### Slide Enable
+Determines whether the slide post processing effect will be used in the scene. Slide can be used to both reduce sudden impulses in color values or introduce a lengthened decay in color values.
+
+### slide_up
+The number of samples a value must be sustained at any position for the output value to increase to that level. 0 is instantaneous, 60 is equivalent to a full second
+
+### slide_down
+The number of samples a value must be sustained at any position for the output value to decrease to that level. 0 is instantaneous, 60 is equivalent to a full second
+
+### invert
+When on, the colors of the openGL scene are inverted (photo-negative)
+
+### Axes Enable
+When on, the X, Y, and Z axes are drawn in the scene for visual reference. (X is Red, Y is Green, Z is Blue)
+
+## Model Parameters
 
