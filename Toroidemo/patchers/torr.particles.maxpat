@@ -568,9 +568,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 997.0, 1283.0, 704.0, 35.0 ],
+					"patching_rect" : [ 997.0, 1283.0, 711.0, 35.0 ],
 					"style" : "",
-					"text" : "jit.gl.gridshape turtle-node @shape cylinder @scale 1. 1. 0.5 @color 1 1 1 0.1 @dim 100 100 @position 0. 0. 0. @anchor 0. 0. 0.5 @blend_enable 1 @depth_enable 0"
+					"text" : "jit.gl.gridshape turtle-node @shape opencylinder @scale 1. 1. 0.5 @color 1 1 1 0.1 @dim 100 100 @position 0. 0. 0. @anchor 0. 0. 0.5 @blend_enable 1 @depth_enable 0"
 				}
 
 			}
@@ -5594,7 +5594,7 @@
 			}
 , 			{
 				"box" : 				{
-					"attr" : "color",
+					"attr" : "shape",
 					"id" : "obj-229",
 					"maxclass" : "attrui",
 					"numinlets" : 1,

@@ -10,25 +10,36 @@ To use and edit the source code, make sure that Max 7 is installed.
 
 Once Max is installed, unzip the project folder and open Toroidemo.maxproj.
 
+# Controls
+
 ## Keyboard Controls
 
 Controls for many of the functions in the visualization are bound to the keyboard.
 
-General Controls
+### General Controls
  - Q   - Reset the simulation
  - R   - Reset the camera angle
  - A   - Pause / Resume the rendering context
  - P   - Pause / Resume the simulation
  - ESC - Toggle fullscreen display
 
-Tracer Particle Controls
+### Tracer Particle Controls
  - Up Arrow   - Increase Placement Radius
  - Down Arrow - Decrease Placement Radius
- - Tab        - Show Placement Radius 
+ - Tab        - Show Placement Radius & Tracer preview point
  - Space      - Place Tracer
  - W          - Clear Particles
 
 Presets can be called up by typing the number and hitting enter. (Only available on numpad currently)
+
+## Mouse Controls
+
+### Rotating the Simulation
+Click and drag inside of the simulation window to rotate. To snap back to the overhead view point, press the R key.
+
+### Setting the Tracer Starting Position
+To modify where the tracers will start in the simulation, hold the TAB key and then click and drag within the window. You should see the placement cylinder appear with the preview point on the surface of the cylinder. Drag left to right in order to rotate the point around the cylinder. Dragging up and down will change the starting position’s point on the Z axis.
+
 
 # Explanation of Parameters
 
