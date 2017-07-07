@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 347.0, 79.0, 943.0, 743.0 ],
+		"rect" : [ 265.0, 79.0, 1002.0, 743.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -38,13 +38,285 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-67",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 797.0, 394.0, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 806.0, 402.5, 150.0, 20.0 ],
+					"style" : "",
+					"text" : "Click a preset from below"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-65",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 814.0, 319.0, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 806.0, 314.5, 150.0, 20.0 ],
+					"style" : "",
+					"text" : "Reset the flow display"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-63",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 813.0, 233.0, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 806.0, 230.5, 150.0, 20.0 ],
+					"style" : "",
+					"text" : "Start the simulation"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-61",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 813.0, 144.0, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 806.0, 143.5, 150.0, 20.0 ],
+					"style" : "",
+					"text" : "Start the rendering context"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 1,
+					"fontsize" : 24.0,
+					"id" : "obj-59",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 809.0, 191.0, 220.0, 33.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 751.5, 396.0, 34.0, 33.0 ],
+					"style" : "",
+					"text" : "4",
+					"textjustification" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 1,
+					"fontsize" : 24.0,
+					"id" : "obj-58",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 794.0, 176.0, 220.0, 33.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 751.5, 308.0, 34.0, 33.0 ],
+					"style" : "",
+					"text" : "3",
+					"textjustification" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 1,
+					"fontsize" : 24.0,
+					"id" : "obj-57",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 779.0, 161.0, 220.0, 33.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 751.5, 224.0, 34.0, 33.0 ],
+					"style" : "",
+					"text" : "2",
+					"textjustification" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 1,
+					"fontsize" : 24.0,
+					"id" : "obj-56",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 764.0, 146.0, 220.0, 33.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 751.5, 137.0, 34.0, 33.0 ],
+					"style" : "",
+					"text" : "1",
+					"textjustification" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-54",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 737.0, 94.0, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 723.0, 86.0, 150.0, 20.0 ],
+					"style" : "",
+					"text" : "Press Buttons in order"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 1,
+					"fontsize" : 18.0,
+					"id" : "obj-52",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 729.0, 97.0, 233.0, 27.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 723.0, 56.0, 233.0, 27.0 ],
+					"style" : "",
+					"text" : "Startup Sequence"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 1,
+					"fontsize" : 24.0,
+					"id" : "obj-50",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 43.0, 40.0, 310.0, 33.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 14.0, 14.5, 310.0, 33.0 ],
+					"style" : "",
+					"text" : "Toroidal Flows Demo"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.290196, 0.309804, 0.301961, 0.0 ],
+					"blinkcolor" : [ 0.960784, 0.827451, 0.156863, 1.0 ],
+					"id" : "obj-48",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"outlinecolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"patching_rect" : [ 629.0, 213.0, 91.0, 91.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 723.0, 279.0, 91.0, 91.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-47",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"patching_rect" : [ 752.0, 167.0, 24.0, 22.0 ],
+					"style" : "",
+					"text" : "t 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.290196, 0.309804, 0.301961, 0.0 ],
+					"blinkcolor" : [ 0.960784, 0.827451, 0.156863, 1.0 ],
+					"id" : "obj-46",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"outlinecolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"patching_rect" : [ 752.0, 71.0, 91.0, 91.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 723.0, 195.0, 91.0, 91.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-45",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"patching_rect" : [ 629.0, 167.0, 24.0, 22.0 ],
+					"style" : "",
+					"text" : "t 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.290196, 0.309804, 0.301961, 0.0 ],
+					"blinkcolor" : [ 0.960784, 0.827451, 0.156863, 1.0 ],
+					"id" : "obj-44",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"outlinecolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"patching_rect" : [ 629.0, 69.0, 91.0, 91.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 723.0, 108.0, 91.0, 91.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-41",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 434.0, 817.5, 150.0, 20.0 ],
+					"style" : "",
+					"text" : "Tracer Particle Positions"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-15",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_matrix", "" ],
+					"patching_rect" : [ 374.0, 817.5, 55.0, 22.0 ],
+					"style" : "",
+					"text" : "jit.matrix"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-26",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 467.0, 45.0, 150.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 434.0, 29.0, 105.0, 20.0 ],
+					"presentation_rect" : [ 818.5, 446.0, 105.0, 20.0 ],
 					"style" : "",
 					"text" : "Available Presets"
 				}
@@ -122,7 +394,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 265.0, 657.0, 252.0, 234.0 ],
+					"patching_rect" : [ 598.0, 338.0, 252.0, 234.0 ],
 					"style" : "",
 					"text" : "Tracer Particle Input: (left inlet of bpatcher)\n\nsend the message tracer followed by 3 floats to set the posiition of the tracer (\"tracer 0. 0. 0.5\")\n\nsend the message tracer with argument add (\"tracer add\") to add that point to the simulation\n\nsend the message tracer with argument enable to toggle rendered preview of tracer position (\"tracer enable\")\n\nsend the message tracer with argument clear to set all particles to the origin point of the simulation (0,0,0) (\"tracer clear\")"
 				}
@@ -229,7 +501,7 @@
 					"patching_rect" : [ 265.0, 422.0, 100.0, 40.0 ],
 					"pattrstorage" : "turtle",
 					"presentation" : 1,
-					"presentation_rect" : [ 434.0, 51.0, 100.0, 32.0 ],
+					"presentation_rect" : [ 821.0, 468.0, 100.0, 32.0 ],
 					"style" : ""
 				}
 
@@ -258,13 +530,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-19",
-					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 346.0, 1007.5, 150.0, 33.0 ],
+					"patching_rect" : [ 191.0, 817.5, 150.0, 20.0 ],
 					"style" : "",
-					"text" : "Added to show where to get data from"
+					"text" : "Flow Particles Positions"
 				}
 
 			}
@@ -274,7 +545,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 314.0, 986.0, 397.0, 20.0 ],
+					"patching_rect" : [ 159.0, 796.0, 397.0, 20.0 ],
 					"style" : "",
 					"text" : "jit.matrix with no arguments adapts to incoming size and planecount"
 				}
@@ -287,7 +558,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 289.0, 1008.0, 55.0, 22.0 ],
+					"patching_rect" : [ 134.0, 818.0, 55.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.matrix"
 				}
@@ -302,8 +573,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 302.5, 366.0, 150.0, 33.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 204.0, 87.5, 218.0, 33.0 ],
+					"presentation_rect" : [ 211.0, 212.0, 306.0, 20.0 ],
 					"style" : "",
 					"text" : "Click & Drag in window to rotate simulation view"
 				}
@@ -318,7 +588,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 76.0, 196.0, 150.0, 33.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 42.0, 41.0, 158.0, 20.0 ],
+					"presentation_rect" : [ 42.0, 86.0, 158.0, 20.0 ],
 					"style" : "",
 					"text" : "Simulation Paused/Running"
 				}
@@ -332,7 +602,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 76.0, 77.0, 150.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 42.0, 12.0, 150.0, 20.0 ],
+					"presentation_rect" : [ 42.0, 58.0, 150.0, 20.0 ],
 					"style" : "",
 					"text" : "Rendering Status"
 				}
@@ -348,7 +618,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 385.0, 56.0, 161.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 14.0, 94.0, 161.0, 20.0 ],
+					"presentation_rect" : [ 14.0, 139.0, 161.0, 20.0 ],
 					"style" : "",
 					"text" : "Reset Object Rotation",
 					"textoncolor" : [ 1.0, 1.0, 1.0, 1.0 ]
@@ -365,7 +635,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 310.0, 28.0, 100.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 14.0, 72.0, 161.0, 20.0 ],
+					"presentation_rect" : [ 14.0, 117.0, 161.0, 20.0 ],
 					"style" : "",
 					"text" : "Reset SImulation",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
@@ -393,7 +663,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 43.0, 1008.0, 239.0, 22.0 ],
+					"patching_rect" : [ 43.0, 755.0, 239.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.gl.videoplane turtles @transform_reset 2"
 				}
@@ -437,12 +707,12 @@
 					"maxclass" : "bpatcher",
 					"name" : "torr.particles.maxpat",
 					"numinlets" : 3,
-					"numoutlets" : 2,
+					"numoutlets" : 3,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "jit_gl_texture", "jit_matrix" ],
-					"patching_rect" : [ 43.0, 273.0, 186.0, 720.0 ],
+					"outlettype" : [ "jit_gl_texture", "jit_matrix", "jit_matrix" ],
+					"patching_rect" : [ 43.0, 273.0, 196.0, 460.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 14.0, 126.0, 685.0, 459.0 ],
+					"presentation_rect" : [ 14.0, 236.0, 685.0, 459.0 ],
 					"varname" : "torr.particles",
 					"viewvisibility" : 1
 				}
@@ -451,16 +721,16 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-16",
-					"linecount" : 5,
+					"linecount" : 14,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 302.5, 281.0, 218.0, 74.0 ],
+					"patching_rect" : [ 302.5, 281.0, 218.0, 194.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 5,
-					"presentation_rect" : [ 204.0, 9.5, 218.0, 74.0 ],
+					"presentation_linecount" : 11,
+					"presentation_rect" : [ 211.0, 56.0, 306.0, 154.0 ],
 					"style" : "",
-					"text" : "Key Commands:\nesc - make window fullscreen\nq - reset particle simulation\np - pause particle simulation\nr - reset object rotation"
+					"text" : "Key Commands:\nesc - make window fullscreen\nq - reset particle simulation\np - pause particle simulation\nr - reset object rotation\nw - clear tracers\nspace - add tracer\ntab - view tracer starting position\ntab + click & drag - set tracer starting position\nup arrow key - Increase tracer placement radius\ndown arrow key - Decrease tracer placement radius"
 				}
 
 			}
@@ -474,7 +744,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 43.0, 205.0, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 14.0, 39.0, 24.0, 24.0 ],
+					"presentation_rect" : [ 14.0, 84.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -541,7 +811,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 43.0, 75.0, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 14.0, 10.0, 24.0, 24.0 ],
+					"presentation_rect" : [ 14.0, 56.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -599,6 +869,27 @@
 				}
 
 			}
+, 			{
+				"box" : 				{
+					"angle" : 270.0,
+					"background" : 1,
+					"bgcolor" : [ 0.290196, 0.309804, 0.301961, 0.0 ],
+					"border" : 2,
+					"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"id" : "obj-68",
+					"maxclass" : "panel",
+					"mode" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 812.0, 655.0, 128.0, 128.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 716.0, 49.0, 252.0, 464.0 ],
+					"proportion" : 0.39,
+					"rounded" : 0,
+					"style" : ""
+				}
+
+			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
@@ -641,6 +932,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
 					"source" : [ "obj-14", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-15", 0 ],
+					"source" : [ "obj-17", 2 ]
 				}
 
 			}
@@ -842,6 +1140,41 @@
 				"patchline" : 				{
 					"destination" : [ "obj-17", 0 ],
 					"source" : [ "obj-43", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-45", 0 ],
+					"source" : [ "obj-44", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-45", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-47", 0 ],
+					"source" : [ "obj-46", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"source" : [ "obj-47", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-34", 0 ],
+					"source" : [ "obj-48", 0 ]
 				}
 
 			}
