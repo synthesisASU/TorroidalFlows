@@ -64,6 +64,12 @@ The distance of the camera in the openGL context from the origin point of the si
 ### point_size
 How large the particles in the simulation will be drawn.
 
+### Current Display
+The combination of flow particles and tracer particles that will be displayed on screen.
+ - Particles - Only the general flow will be displayed
+ - Tracers - Only user added tracers will be displayed
+ - Particles & Tracers - Both general flow particles and user added flow particles will displayed
+
 
 ## Unperturbed Model Parameters
 
@@ -127,6 +133,12 @@ When on, the X, Y, and Z axes are drawn in the scene for visual reference. (X is
 
 ## Tracer Parameters
 
+### point_size
+The diameter that will be used when drawing the tracers onscreen.
+
+### tracer_color
+The color the tracers will be drawn in.
+
 ### X Position
 The position of tracer particle starting positions on the X axis
 
@@ -142,7 +154,7 @@ Determines whether to draw a preview of the current tracer starting position
 ### Add Point
 Press this button to add a tracer to the simulation (or by pressing space on the keyboard)
 
-### Set All Points To Origin
-Press to clear all particles by setting their position to be at the origin of the simulation (black hole case) or by pressing w on the keyboard.
+### Clear Tracers
+Removes all uses added tracers.
 
 
