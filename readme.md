@@ -125,7 +125,7 @@ Determines whether to draw a preview of the current tracer starting position
 Press this button to add a tracer to the simulation (or by pressing space on the keyboard)
 
 ### Clear Tracers
-Removes all uses added tracers.
+Removes all user added tracers.
 
 
 ## Post-Processing Parameters
