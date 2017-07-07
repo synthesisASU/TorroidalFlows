@@ -2,8 +2,8 @@
 	"name" : "Toroidemo",
 	"version" : 1,
 	"creationdate" : -715242362,
-	"modificationdate" : -714731374,
-	"viewrect" : [ 25.0, 70.0, 300.0, 500.0 ],
+	"modificationdate" : -712687461,
+	"viewrect" : [ 204.0, 65.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -48,6 +48,21 @@
 				"kind" : "genjit",
 				"local" : 1
 			}
+,
+			"torr.tracer.perturbed.genjit" : 			{
+				"kind" : "genjit",
+				"local" : 1
+			}
+,
+			"torr.tracer.velocity.genjit" : 			{
+				"kind" : "genjit",
+				"local" : 1
+			}
+,
+			"torr.tracer.color.genjit" : 			{
+				"kind" : "genjit",
+				"local" : 1
+			}
 
 		}
 ,
@@ -81,5 +96,6 @@
 	"amxdtype" : 1633771873,
 	"readonly" : 0,
 	"devpathtype" : 0,
-	"devpath" : "."
+	"devpath" : ".",
+	"sortmode" : 0
 }
