@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 743.0, 79.0, 640.0, 750.0 ],
+		"rect" : [ 347.0, 79.0, 943.0, 743.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,20 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-26",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 467.0, 45.0, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 434.0, 29.0, 105.0, 20.0 ],
+					"style" : "",
+					"text" : "Available Presets"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-40",
 					"maxclass" : "number",
@@ -215,7 +229,7 @@
 					"patching_rect" : [ 265.0, 422.0, 100.0, 40.0 ],
 					"pattrstorage" : "turtle",
 					"presentation" : 1,
-					"presentation_rect" : [ 382.0, 240.0, 100.0, 32.0 ],
+					"presentation_rect" : [ 434.0, 51.0, 100.0, 32.0 ],
 					"style" : ""
 				}
 
@@ -289,7 +303,7 @@
 					"patching_rect" : [ 302.5, 366.0, 150.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 382.0, 199.0, 218.0, 33.0 ],
+					"presentation_rect" : [ 204.0, 87.5, 218.0, 33.0 ],
 					"style" : "",
 					"text" : "Click & Drag in window to rotate simulation view"
 				}
@@ -304,7 +318,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 76.0, 196.0, 150.0, 33.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 409.0, 45.0, 158.0, 20.0 ],
+					"presentation_rect" : [ 42.0, 41.0, 158.0, 20.0 ],
 					"style" : "",
 					"text" : "Simulation Paused/Running"
 				}
@@ -318,7 +332,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 76.0, 77.0, 150.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 409.0, 16.0, 150.0, 20.0 ],
+					"presentation_rect" : [ 42.0, 12.0, 150.0, 20.0 ],
 					"style" : "",
 					"text" : "Rendering Status"
 				}
@@ -334,7 +348,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 385.0, 56.0, 161.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 382.0, 96.0, 161.0, 20.0 ],
+					"presentation_rect" : [ 14.0, 94.0, 161.0, 20.0 ],
 					"style" : "",
 					"text" : "Reset Object Rotation",
 					"textoncolor" : [ 1.0, 1.0, 1.0, 1.0 ]
@@ -351,7 +365,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 310.0, 28.0, 100.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 382.0, 74.0, 161.0, 20.0 ],
+					"presentation_rect" : [ 14.0, 72.0, 161.0, 20.0 ],
 					"style" : "",
 					"text" : "Reset SImulation",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
@@ -428,7 +442,7 @@
 					"outlettype" : [ "jit_gl_texture", "jit_matrix" ],
 					"patching_rect" : [ 43.0, 273.0, 186.0, 720.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 14.0, 14.0, 351.0, 723.0 ],
+					"presentation_rect" : [ 14.0, 126.0, 685.0, 459.0 ],
 					"varname" : "torr.particles",
 					"viewvisibility" : 1
 				}
@@ -444,7 +458,7 @@
 					"patching_rect" : [ 302.5, 281.0, 218.0, 74.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 5,
-					"presentation_rect" : [ 382.0, 121.0, 218.0, 74.0 ],
+					"presentation_rect" : [ 204.0, 9.5, 218.0, 74.0 ],
 					"style" : "",
 					"text" : "Key Commands:\nesc - make window fullscreen\nq - reset particle simulation\np - pause particle simulation\nr - reset object rotation"
 				}
@@ -460,7 +474,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 43.0, 205.0, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 381.0, 43.0, 24.0, 24.0 ],
+					"presentation_rect" : [ 14.0, 39.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -527,7 +541,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 43.0, 75.0, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 381.0, 14.0, 24.0, 24.0 ],
+					"presentation_rect" : [ 14.0, 10.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -853,6 +867,10 @@
 
 			}
  ],
+		"parameters" : 		{
+			"obj-17::obj-308" : [ "live.tab", "live.tab", 0 ]
+		}
+,
 		"dependency_cache" : [ 			{
 				"name" : "torr.render.maxpat",
 				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/patchers",
@@ -890,6 +908,27 @@
 			}
 , 			{
 				"name" : "torr.particle.perturbed.genjit",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"patcherrelativepath" : "../code",
+				"type" : "gJIT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "torr.tracer.perturbed.genjit",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"patcherrelativepath" : "../code",
+				"type" : "gJIT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "torr.tracer.velocity.genjit",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"patcherrelativepath" : "../code",
+				"type" : "gJIT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "torr.tracer.color.genjit",
 				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
 				"patcherrelativepath" : "../code",
 				"type" : "gJIT",
