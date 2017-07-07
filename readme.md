@@ -43,34 +43,6 @@ To modify where the tracers will start in the simulation, hold the TAB key and t
 
 # Explanation of Parameters
 
-## General Parameters
-
-### dim 
-The number of particles used in the simulation.
-The count should not exceed 1,000,000 (1000x1000) except on high-end computers. Optimal settings range from 100x100 to 500x500 for most computers.
-
-### zPos
-The position in the z dimension at which the initial plane of points will be drawn. This parameter is only in effect when point mode is toggled on.
-
-### pointmode
-Determines whether points will be initialized in a plane or a cube. When ON, particles will be initialized on a plane. When OFF, points will reside within a cube.
-
-### colormode
-Determines the colorization of the particles. When ON, colors will be initialized based on x,y,z coordinates when the simulation is started. When OFF, colors will be based on x,y,x*y coordinates when the simulation is started. Colors do not change over time, and will remain constant based on the initial formula. 
-
-### zPosition
-The distance of the camera in the openGL context from the origin point of the simulation.
-
-### point_size
-How large the particles in the simulation will be drawn.
-
-### Current Display
-The combination of flow particles and tracer particles that will be displayed on screen.
- - Particles - Only the general flow will be displayed
- - Tracers - Only user added tracers will be displayed
- - Particles & Tracers - Both general flow particles and user added flow particles will displayed
-
-
 ## Unperturbed Model Parameters
 
 ### stepSize
@@ -102,6 +74,60 @@ The degree of variance in the vertical direction
 ### time dependent
 The strength of the time dependent portion of the perturbation.
 
+## General Flow Display Parameters
+
+### dim 
+The number of particles used in the simulation.
+The count should not exceed 1,000,000 (1000x1000) except on high-end computers. Optimal settings range from 100x100 to 500x500 for most computers.
+
+### zPos
+The position in the z dimension at which the initial plane of points will be drawn. This parameter is only in effect when point mode is toggled on.
+
+### pointmode
+Determines whether points will be initialized in a plane or a cube. When ON, particles will be initialized on a plane. When OFF, points will reside within a cube.
+
+### colormode
+Determines the colorization of the particles. When ON, colors will be initialized based on x,y,z coordinates when the simulation is started. When OFF, colors will be based on x,y,x*y coordinates when the simulation is started. Colors do not change over time, and will remain constant based on the initial formula. 
+
+### zPosition
+The distance of the camera in the openGL context from the origin point of the simulation.
+
+### point_size
+How large the particles in the simulation will be drawn.
+
+### Current Display
+The combination of flow particles and tracer particles that will be displayed on screen.
+- Particles - Only the general flow will be displayed
+- Tracers - Only user added tracers will be displayed
+- Particles & Tracers - Both general flow particles and user added flow particles will displayed
+
+## Tracer Display Parameters
+
+### point_size
+The diameter that will be used when drawing the tracers onscreen.
+
+### tracer_color
+The color the tracers will be drawn in.
+
+### X Position
+The position of tracer particle starting positions on the X axis
+
+### Y Position
+The position of tracer particle starting positions on the Y axis
+
+### Z Position
+The position of tracer particle starting positions on the Z axis
+
+### Tracer Enable
+Determines whether to draw a preview of the current tracer starting position
+
+### Add Point
+Press this button to add a tracer to the simulation (or by pressing space on the keyboard)
+
+### Clear Tracers
+Removes all uses added tracers.
+
+
 ## Post-Processing Parameters
 
 ### Bloom Enable
@@ -130,31 +156,4 @@ When on, the colors of the openGL scene are inverted (photo-negative)
 
 ### Axes Enable
 When on, the X, Y, and Z axes are drawn in the scene for visual reference. (X is Red, Y is Green, Z is Blue)
-
-## Tracer Parameters
-
-### point_size
-The diameter that will be used when drawing the tracers onscreen.
-
-### tracer_color
-The color the tracers will be drawn in.
-
-### X Position
-The position of tracer particle starting positions on the X axis
-
-### Y Position
-The position of tracer particle starting positions on the Y axis
-
-### Z Position
-The position of tracer particle starting positions on the Z axis
-
-### Tracer Enable
-Determines whether to draw a preview of the current tracer starting position
-
-### Add Point
-Press this button to add a tracer to the simulation (or by pressing space on the keyboard)
-
-### Clear Tracers
-Removes all uses added tracers.
-
 
