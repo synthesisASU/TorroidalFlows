@@ -31,7 +31,7 @@ Controls for many of the functions in the visualization are bound to the keyboar
  - W          - Clear Particles
 
 ### Presets
-Currently there are 16 presets that show different states of the model and parameters. Presets can be called up by typing the number and hitting enter. Descriptions of each preset is upcoming.
+Currently there are 16 presets that show different states of the model and parameters. Presets can be called up by typing the number and hitting enter. Descriptions of each preset are listed below.
 
 ## Mouse Controls
 
@@ -158,3 +158,68 @@ When on, the colors of the openGL scene are inverted (photo-negative)
 ### Axes Enable
 When on, the X, Y, and Z axes are drawn in the scene for visual reference. (X is Red, Y is Green, Z is Blue)
 
+# Preset Descriptions
+
+### 1 (Basic)
+
+The basic preset is a low resolution unperturbed flow. The flow is initialized on a plane in the center of the z-axis.
+
+### 2 (Basic Trails)
+
+Basic Trails uses the same resolution and starting placement as the basic preset. The slide has been increased in order to create a visual history of the flow particle positions.
+
+### 3 (Inverted Cloud)
+
+The Inverted Cloud is a randomly filled cube that shows the instantaneous positions of the flow particles in the unperturbed model.
+
+### 4 (Flare)
+
+The Flare starts on a plane just above the siulation floor. As the simulation runs, the particles begin to faintly show the interlocking tori of the model. Best viewed from the side rather than the top.
+
+### 5 (Flare w/ Tracers)
+
+This variant of the Flare preset can have tracers added by default. Use the controls guide at the top of the readme for help adding tracer particles.
+
+### 6 (Dr. Strange Portal)
+
+Artistic preset that is set to switch to the overhead viewpoint. Named due to its similarities to the portals in the movie Dr. Strange.
+
+### 7 (The Cloud)
+
+This preset employs a heavy time-based blur effect. The blurring allows for more clear definition of interior surfaces and tori.
+
+### 8 (Rainbow Trails)
+
+As this preset settles into the flow, the central surface and motion of the tori can be more clearly seen.
+
+### 9 (Large Basic Trails)
+
+Created in the same resolution as the Basic preset. The large particle size and time-based blur give the feel as though the model is being drawn with Sharpies.
+
+### 10 (Fine Trails Invert)
+
+The small particle size allows the walls of each torus in the model to be clearly seen.
+
+### 11 (High Bloom Plane)
+
+The early stages of this preset show the structure of the tori closest to the center of the simulation. The particles are colored the same ways the Rainbow Trails preset, just much smaller and with a far denser resolution.
+
+### 12 (Fine Trails)
+
+Functionally the same as the inverted version, just on a black background.
+
+### 13 (High Bloom, Fine Trails, Invert)
+
+A mixture between the fine trails and the High Bloom Plane. Early stages show the smallest tori in the simmulation. As the simulation settles, the exterior tori become increasingly clear.
+
+### 14 (High Bloom, Perturbed)
+
+Uses the same particles as the High Bloom with a cube initialization. Utilizes the perturbation model parameters to change the shape of the flow. As the simulation settles, the perturbed flow becomes more prominent.
+
+### 15 (Perturbed Blur)
+
+Using time-based blurring, creates a more surface-like appearance of the perturbed flow.
+
+### 16 (Perturbed Blur w/ Tracers)
+
+Identical to the Perturbed Blur, with tracer addition enabled by default.
