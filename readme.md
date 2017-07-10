@@ -30,7 +30,8 @@ Controls for many of the functions in the visualization are bound to the keyboar
  - Space      - Place Tracer
  - W          - Clear Particles
 
-Presets can be called up by typing the number and hitting enter. (Only available on numpad currently)
+### Presets
+Currently there are 16 presets that show different states of the model and parameters. Presets can be called up by typing the number and hitting enter. Descriptions of each preset is upcoming.
 
 ## Mouse Controls
 
