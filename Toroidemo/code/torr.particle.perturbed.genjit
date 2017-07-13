@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 3,
-			"revision" : 1,
+			"revision" : 4,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 1660.0, 79.0, 1112.0, 771.0 ],
+		"rect" : [ 294.0, 79.0, 1112.0, 771.0 ],
 		"editing_bgcolor" : [ 0.9, 0.9, 0.9, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -39,7 +39,7 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"code" : "//get the current position in scalar values\r\nx = in2.r;\r\ny = in2.g;\r\nz = in2.b;\r\n\r\n//first check if epsilon > 0\r\nif(epsilon > 0.) {\r\n\t//calculate the distance from the central pole (x = 0 & y = 0)\r\n\tmyRadius = sqrt(pow(x,2) + pow(y, 2));\r\n\r\n\t/*---------------------\r\n\tcalculate U component\r\n\t------------------------*/\r\n\t\r\n\t//start with the last terms\r\n\tuEnd = 1 - (beta * z);\r\n\t\r\n\t//now start working out the interior terms\r\n\tuRadius = ((pow(radius, 2) - pow(myRadius, 2)) / 2); //(R^2 - r^2) /  2\r\n\tuTime = gamma * cos(sigma * t);\r\n\tuSymmetry = y * (y - y0); //there's a missing ) in the written equation, best guess is that it belongs here\r\n\tuInternal = uSymmetry + uTime - uRadius;\r\n\t\r\n\t//multiply everything together and you've made a u component\r\n\tu = epsilon * uInternal * uEnd;\r\n\t\r\n\t/*-------------------------\r\n\t calculate v component\r\n\t-------------------------*/\r\n\t\r\n\t//start with last terms again\r\n\tvEnd = 1 - (beta * z);\r\n\t\r\n\t//now the internal terms\r\n\tvTime = gamma * cos(sigma * t);\r\n\tvSymmetry = y - y0;\r\n\t//no radius term in the v component\r\n\tvInternal = vSymmetry + vTime;\r\n\t\r\n\t//multiply to complete v\r\n\tv = epsilon * x * vInternal * vEnd;\r\n\t\r\n\tw = 0; //no w component \r\n\t//it feels left out of the perturbed fun\r\n\t\r\n\tout1 = vec(u,v,w,1);\r\n\r\n} else {\r\n\tout1 = vec(0,0,0,1);\r\n}",
+					"code" : "//get the current position in scalar values\r\nx = in2.r;\r\ny = in2.g;\r\nz = in2.b;\r\n\r\n//first check if epsilon > 0\r\nif(epsilon > 0.) {\r\n\t//calculate the distance from the central pole (x = 0 & y = 0)\r\n\tmyRadius = sqrt(pow(x,2) + pow(y, 2));\r\n\r\n\t/*---------------------\r\n\tcalculate U component\r\n\t------------------------*/\r\n\t\r\n\t//start with the last terms\r\n\tuEnd = 1 - (beta * z);\r\n\t\r\n\t//now start working out the interior terms\r\n\tuRadius = ((pow(radius, 2) - pow(myRadius, 2)) / 2); //(R^2 - r^2) /  2\r\n\tuTime = gamma * cos(sigma * time);\r\n\tuSymmetry = y * (y - y0); //there's a missing ) in the written equation, best guess is that it belongs here\r\n\tuInternal = uSymmetry + uTime - uRadius;\r\n\t\r\n\t//multiply everything together and you've made a u component\r\n\tu = epsilon * uInternal * uEnd;\r\n\t\r\n\t/*-------------------------\r\n\t calculate v component\r\n\t-------------------------*/\r\n\t\r\n\t//start with last terms again\r\n\tvEnd = 1 - (beta * z);\r\n\t\r\n\t//now the internal terms\r\n\tvTime = gamma * cos(sigma * time);\r\n\tvSymmetry = y - y0;\r\n\t//no radius term in the v component\r\n\tvInternal = vSymmetry + vTime;\r\n\t\r\n\t//multiply to complete v\r\n\tv = epsilon * x * vInternal * vEnd;\r\n\t\r\n\tw = 0; //no w component \r\n\t//it feels left out of the perturbed fun\r\n\t\r\n\tout1 = vec(u,v,w,1);\r\n\r\n} else {\r\n\tout1 = vec(0,0,0,1);\r\n}",
 					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -86,9 +86,9 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 877.0, 113.0, 65.0, 22.0 ],
+					"patching_rect" : [ 877.0, 113.0, 84.0, 22.0 ],
 					"style" : "",
-					"text" : "param t 0."
+					"text" : "param time 0."
 				}
 
 			}
@@ -234,8 +234,6 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-25", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -243,8 +241,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-25", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
 					"midpoints" : [ 263.5, 48.0, 621.0, 48.0, 621.0, 59.0, 811.5, 59.0 ],
 					"source" : [ "obj-2", 0 ]
 				}
@@ -253,8 +249,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
 					"source" : [ "obj-25", 0 ]
 				}
 
