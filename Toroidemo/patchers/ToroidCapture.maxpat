@@ -11,7 +11,7 @@
 ,
 		"rect" : [ 214.0, 96.0, 990.0, 737.0 ],
 		"bglocked" : 0,
-		"openinpresentation" : 0,
+		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
@@ -182,7 +182,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 100.0, 65.0, 22.0 ],
 									"style" : "",
-									"text" : "flow-9.txt"
+									"text" : "flow-9.jmt"
 								}
 
 							}
@@ -337,9 +337,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 108.0, 1150.0, 49.0, 22.0 ],
+					"patching_rect" : [ 108.0, 1150.0, 208.0, 22.0 ],
 					"style" : "",
-					"text" : "jit.fprint"
+					"text" : "jit.fprint @type float32 @writemode 1"
 				}
 
 			}

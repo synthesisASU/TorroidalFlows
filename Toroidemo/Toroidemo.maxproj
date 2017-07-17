@@ -2,7 +2,7 @@
 	"name" : "Toroidemo",
 	"version" : 1,
 	"creationdate" : -715242362,
-	"modificationdate" : -711884524,
+	"modificationdate" : -711819868,
 	"viewrect" : [ 25.0, 70.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -17,8 +17,7 @@
 ,
 			"Toroidemo.maxpat" : 			{
 				"kind" : "patcher",
-				"local" : 1,
-				"toplevel" : 1
+				"local" : 1
 			}
 ,
 			"torr.render.maxpat" : 			{
@@ -28,7 +27,8 @@
 ,
 			"ToroidCapture.maxpat" : 			{
 				"kind" : "patcher",
-				"local" : 1
+				"local" : 1,
+				"toplevel" : 1
 			}
 
 		}
