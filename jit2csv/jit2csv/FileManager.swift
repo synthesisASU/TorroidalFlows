@@ -45,4 +45,15 @@ class FileHandler {
         }
         
     }
+    
+    static func writeCSV(outputPath : URL, outputData : [String]) {
+        
+        let outData = outputData.joined(separator: "\n")
+        
+        do {
+            try outData.write(to: outputPath, atomically: false, encoding: String.Encoding.utf16)
+        } catch {
+            Swift.print("Unable to write file: \(outputPath.absoluteString)" )
+        }
+    }
 }
