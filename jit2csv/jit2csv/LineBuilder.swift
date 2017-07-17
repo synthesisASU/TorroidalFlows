@@ -13,18 +13,28 @@ class LineBuilder {
     static func formatData(dataIn: String) -> String {
         var outputStr = [String]()
         
-        let lines = dataIn.components(separatedBy: "\n")
+        let lines = dataIn.components(separatedBy: "|")
         
-        for line in lines {
+        Swift.print("lines: \(lines.count)")
+        
+        for (index, line) in lines.enumerated() {
+            
+            if(index < lines.count - 1) {
+            
             let points = line.components(separatedBy: "\t")
+            
+            Swift.print("Points: \(points.count)")
             
             for point in points {
                 
                 let planes = point.components(separatedBy: " ")
                 
+                
+                
                 for plane in planes {
                     outputStr.append(plane)
                 }
+            }
             }
         }
         
