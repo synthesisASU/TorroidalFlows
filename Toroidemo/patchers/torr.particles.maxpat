@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 3,
 			"revision" : 4,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 452.0, 160.0, 1517.0, 1164.0 ],
+		"rect" : [ -2014.0, 79.0, 1628.0, 869.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -38,12 +38,26 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-368",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_gl_texture", "" ],
+					"patching_rect" : [ 1647.5, 2069.0, 297.0, 22.0 ],
+					"style" : "",
+					"text" : "jit.gl.pix @drawto turtles @gen torr.vector.colors.genjit",
+					"varname" : "particle-colors[1]"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-376",
 					"maxclass" : "newobj",
 					"numinlets" : 3,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 1562.0, 2121.0, 58.0, 22.0 ],
+					"patching_rect" : [ 1512.5, 2125.0, 58.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.pack 3"
 				}
@@ -56,22 +70,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 5,
 					"outlettype" : [ "jit_matrix", "jit_matrix", "jit_matrix", "jit_matrix", "" ],
-					"patching_rect" : [ 1562.0, 2091.0, 71.0, 22.0 ],
+					"patching_rect" : [ 1512.5, 2095.0, 71.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.unpack 4"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-375",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"patching_rect" : [ 1551.0, 2014.0, 30.0, 22.0 ],
-					"style" : "",
-					"text" : "t l b"
 				}
 
 			}
@@ -108,7 +109,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 1562.0, 2065.0, 101.0, 22.0 ],
+					"patching_rect" : [ 1512.5, 2069.0, 101.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.matrix @thru 0"
 				}
@@ -237,7 +238,7 @@
 					"numinlets" : 9,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 1551.0, 2230.0, 646.0, 22.0 ],
+					"patching_rect" : [ 1512.5, 2181.0, 646.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.gl.mesh turtle-node @draw_mode line_strip @line_width 1. @smooth_shading 1 @depth_enable 0 @blend_enable 1"
 				}
@@ -758,7 +759,7 @@
 				"box" : 				{
 					"comment" : "Tracer Positions",
 					"id" : "obj-320",
-					"index" : 3,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -1442,7 +1443,7 @@
 							"major" : 7,
 							"minor" : 3,
 							"revision" : 4,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -2381,7 +2382,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-247",
-					"index" : 3,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -3181,7 +3182,7 @@
 							"major" : 7,
 							"minor" : 3,
 							"revision" : 4,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -3909,7 +3910,7 @@
 							"major" : 7,
 							"minor" : 3,
 							"revision" : 4,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -4120,7 +4121,7 @@
 							"major" : 7,
 							"minor" : 3,
 							"revision" : 4,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -5568,7 +5569,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-2",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -5684,7 +5685,7 @@
 							"major" : 7,
 							"minor" : 3,
 							"revision" : 4,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -6126,7 +6127,7 @@
 							"major" : 7,
 							"minor" : 3,
 							"revision" : 4,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -6742,7 +6743,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-18",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -6768,7 +6769,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-59",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -7070,7 +7071,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-1",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -7923,7 +7924,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-187", 4 ],
-					"midpoints" : [ 1142.5, 669.0, 1227.166667, 669.0 ],
+					"midpoints" : [ 1142.5, 669.0, 1227.166626, 669.0 ],
 					"order" : 0,
 					"source" : [ "obj-144", 0 ]
 				}
@@ -7932,7 +7933,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-263", 1 ],
-					"midpoints" : [ 1142.5, 669.0, 1104.0, 669.0, 1104.0, 711.0, 1027.833333, 711.0 ],
+					"midpoints" : [ 1142.5, 669.0, 1104.0, 669.0, 1104.0, 711.0, 1027.833374, 711.0 ],
 					"order" : 1,
 					"source" : [ "obj-144", 0 ]
 				}
@@ -7996,7 +7997,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-187", 5 ],
-					"midpoints" : [ 1199.0, 669.0, 1248.333333, 669.0 ],
+					"midpoints" : [ 1199.0, 669.0, 1248.333374, 669.0 ],
 					"order" : 0,
 					"source" : [ "obj-153", 0 ]
 				}
@@ -8005,7 +8006,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-263", 2 ],
-					"midpoints" : [ 1199.0, 669.0, 1104.0, 669.0, 1104.0, 711.0, 1053.166667, 711.0 ],
+					"midpoints" : [ 1199.0, 669.0, 1104.0, 669.0, 1104.0, 711.0, 1053.166626, 711.0 ],
 					"order" : 1,
 					"source" : [ "obj-153", 0 ]
 				}
@@ -8253,7 +8254,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-153", 0 ],
-					"midpoints" : [ 1388.833333, 600.0, 1199.0, 600.0 ],
+					"midpoints" : [ 1388.833374, 600.0, 1199.0, 600.0 ],
 					"source" : [ "obj-199", 1 ]
 				}
 
@@ -8261,7 +8262,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-179", 0 ],
-					"midpoints" : [ 1400.166667, 600.0, 1269.5, 600.0 ],
+					"midpoints" : [ 1400.166626, 600.0, 1269.5, 600.0 ],
 					"source" : [ "obj-199", 2 ]
 				}
 
@@ -9748,7 +9749,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-375", 0 ],
+					"destination" : [ "obj-364", 0 ],
 					"source" : [ "obj-358", 0 ]
 				}
 
@@ -9825,6 +9826,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-364", 0 ],
+					"source" : [ "obj-368", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-357", 0 ],
 					"source" : [ "obj-371", 0 ]
 				}
@@ -9847,7 +9855,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-347", 0 ],
-					"order" : 2,
+					"order" : 4,
 					"source" : [ "obj-374", 0 ]
 				}
 
@@ -9878,15 +9886,9 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-347", 0 ],
-					"source" : [ "obj-375", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-364", 0 ],
-					"source" : [ "obj-375", 0 ]
+					"destination" : [ "obj-368", 0 ],
+					"order" : 2,
+					"source" : [ "obj-374", 0 ]
 				}
 
 			}
@@ -10324,7 +10326,76 @@
 				}
 
 			}
- ]
+ ],
+		"parameters" : 		{
+			"obj-308" : [ "live.tab", "live.tab", 0 ]
+		}
+,
+		"dependency_cache" : [ 			{
+				"name" : "torr.particle.velocity.genjit",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"patcherrelativepath" : "../code",
+				"type" : "gJIT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "torr.particle.positions.genjit",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"patcherrelativepath" : "../code",
+				"type" : "gJIT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "torr.particle.colors.genjit",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"patcherrelativepath" : "../code",
+				"type" : "gJIT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "torr.particle.perturbed.genjit",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"patcherrelativepath" : "../code",
+				"type" : "gJIT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "torr.tracer.perturbed.genjit",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"patcherrelativepath" : "../code",
+				"type" : "gJIT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "torr.tracer.velocity.genjit",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"patcherrelativepath" : "../code",
+				"type" : "gJIT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "torr.tracer.color.genjit",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"patcherrelativepath" : "../code",
+				"type" : "gJIT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "torr.vector.position_init.genjit",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"patcherrelativepath" : "../code",
+				"type" : "gJIT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "torr.vector.colors.genjit",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"patcherrelativepath" : "../code",
+				"type" : "gJIT",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }

@@ -1,0 +1,30 @@
+<jittershader name="toroid vector plot">
+    <description>
+        draw velocity field using input texture
+    </description>
+    <param name="tex" type="int" default="0"/>
+    <param name="texEnd" type="int" default="1"/>
+    <param name="texColor" type="int" default="2"/>
+    <param name="headLength" type="float" default="0.05"/>
+
+    <language name="glsl" version="1.2">
+        <bind param="tex" program="gp" />
+        <bind param="texEnd" program="gp" />
+        <bind param="headLength" program="gp" />
+        <bind param="texColor" program="fp" />
+
+        <program name="vp" type="vertex">
+<![CDATA[
+
+        #version 120
+
+        varying vec2 texdim0;
+        varying vec2 texdim1;
+
+        void main() {
+            gl_Position = gl_Vertex;
+            gl_FrontColor = gl_Color;
+            texdim0 = vec2(abs(gl_TextureMatrix[0][0][0]),abs(gl_TextureMatrix[0][1][1]));
+            texdim1 = vec2(abs(gl_TextureMatrix[1][0][0]),abs(gl_TextureMatrix[1][1][1]));
+        }        
+]]>
