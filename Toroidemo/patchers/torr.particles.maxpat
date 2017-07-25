@@ -739,7 +739,7 @@
 							"parameter_longname" : "live.tab",
 							"parameter_shortname" : "live.tab",
 							"parameter_type" : 2,
-							"parameter_enum" : [ "Particles", "Tracers", "Particles & Tracerss" ],
+							"parameter_enum" : [ "Particles", "Tracers", "Particles & Tracers" ],
 							"parameter_unitstyle" : 0
 						}
 
