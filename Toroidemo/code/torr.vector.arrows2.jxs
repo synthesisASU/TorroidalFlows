@@ -4,22 +4,30 @@
     </description>
     <param name="tex" type="int" default="0"/>
     <param name="headLength" type="float" default="0.05"/>
+
     <language name="glsl" version="1.2">
         <bind param="tex" program="gp" />
         <bind param="headLength" program="gp" />
+
         <program name="vp" type="vertex">
 <![CDATA[
+
         #version 120
+
         varying vec2 texdim0;
-        void main(void) {
+        varying vec2 texdim1;
+
+        void main() {
             gl_Position = gl_Vertex;
             gl_FrontColor = gl_Color;
             texdim0 = vec2(abs(gl_TextureMatrix[0][0][0]),abs(gl_TextureMatrix[0][1][1]));
+            texdim1 = vec2(abs(gl_TextureMatrix[1][0][0]),abs(gl_TextureMatrix[1][1][1]));
         }        
 ]]>
         </program>
-        <program name="gp" vertices_out="5" input_type="points" output_type="line_strip" type="geometry">
+        <program name="gp" type="geometry" vertices_out="5" input_type="points" output_type="line_strip">
 <![CDATA[
+
         #version 120
         #extension GL_EXT_geometry_shader4 : enable
 
@@ -27,24 +35,25 @@
 
         uniform float headLength;
         varying in vec2 texdim0[1];
+        varying in vec2 texdim1[1];
 
         varying out vec4 fragColor;
 
-        void main(void) {
+        void main() {
 
             //base vertex for arrow
             vec4 a_base = gl_PositionIn[0];
 
             //get the tip of the arrow from the texture
-            vec3 a_point = texture2DRect(tex, a_base.xy * texdim0[0]).xyz;
+            vec3 a_point = texture2DRect(tex, a_base.xy * tedim0[0]).xyz;
 
             //get the z slope for the arrow
             float zSlope = a_point.b;
 
             //find the point at which to draw the normal from for the arrow head
             float zScalar = a_base.b + ((1.0 - headLength) * zSlope);
-            float xScalar = a_base.r + ((1.0 - headLength) * a_point.r);
-            float yScalar = a_base.g + ((1.0 - headLength) * a_point.g);
+            float xScalar - a_base.r + ((1.0 - headLength) * a_point.r);
+            float yScalar - a_base.g + ((1.0 - headLength) * a_point.g);
 
             vec3 tip0 = vec3(xScalar + (headLength * (-1.0 * a_point.g)), yScalar + (headLength * a_point.r), zScalar);
             vec3 tip1 = vec3(xScalar + (headLength * a_point.r), yScalar + (headLength * (-1.0 * a_point.r)), zScalar);
@@ -65,25 +74,25 @@
 
             //point 
             fragColor = arrowColor;
-            gl_Position = vec4(a_base.rgb + a_point, 1);
+            gl_Position = a_base + a_point;
             gl_FrontColor = arrowColor;
             EmitVertex();
 
             //tip0
             fragColor = arrowColor;
-            gl_Position = vec4(tip0.rgb, 1);
+            gl_Position = tip0;
             gl_FrontColor = arrowColor;
             EmitVertex();
             
             //point again
             fragColor = arrowColor;
-            gl_Position = vec4(a_base.rgb + a_point, 1);
+            gl_Position = a_base + a_point;
             gl_FrontColor = arrowColor;
             EmitVertex();
 
             //tip1
             fragColor = arrowColor;
-            gl_Position = vec4(tip1.rgb,1);
+            gl_Position = tip1;
             gl_FrontColor = arrowColor;
             EmitVertex();
 
@@ -99,7 +108,7 @@
     #version 120
     varying vec4 fragColor;
 
-    void main(void) {
+    void main() {
         //just pass out the color provided by the geometry program
         gl_FragColor = fragColor;
     }

@@ -1,0 +1,37 @@
+<jittershader name="toroid vector plot">
+    <description>
+        set velocity vector arrow's color by position
+    </description>
+    <param name="tex" type="int" default="0"/>
+    <language name="glsl" version="1.2">
+        <bind param="tex" program="fp" />
+        <program name="vp" type="vertex">
+<![CDATA[
+
+        #version 120
+
+        //just pass as is
+        void main(void) {
+            gl_Position = gl_Vertex;
+            gl_FrontColor = gl_Color;
+        }        
+]]>
+    </program>
+    <program name="fp" type="fragment">
+<![CDATA[
+
+    #version 120
+    
+    void main(void) {
+        
+        //get the scalar values for colors
+        xPos = (normalize(gl_Color.r) * 0.75) + 0.25;
+        yPos = (normalize(gl_Color.g) * 0.75) + 0.25;
+        zPos = (normalize(gl_Color.b) * 0.75) + 0.25;
+
+        gl_FrontColor = vec4(xPos,yPos,zPos,1);
+    }
+]]>
+        </program>
+    </language>
+</jittershader>

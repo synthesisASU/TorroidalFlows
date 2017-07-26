@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 3,
 			"revision" : 4,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 658.0, 322.0, 1053.0, 347.0 ],
+		"rect" : [ 2259.0, 168.0, 1053.0, 347.0 ],
 		"editing_bgcolor" : [ 0.9, 0.9, 0.9, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -39,6 +39,18 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 514.0, 320.0, 37.0, 22.0 ],
+					"style" : "",
+					"text" : "out 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-11",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -52,13 +64,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-9",
-					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 821.0, 14.0, 150.0, 33.0 ],
+					"patching_rect" : [ 855.0, 25.5, 150.0, 20.0 ],
 					"style" : "",
-					"text" : "\"Golden Angle\" From Vogel's Method"
+					"text" : "2PI"
 				}
 
 			}
@@ -69,9 +80,9 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 725.0, 31.0, 88.0, 22.0 ],
+					"patching_rect" : [ 725.0, 31.0, 121.0, 22.0 ],
 					"style" : "",
-					"text" : "param ang 2.4"
+					"text" : "param ang 6.290318"
 				}
 
 			}
@@ -103,15 +114,15 @@
 			}
 , 			{
 				"box" : 				{
-					"code" : "y = norm.y; //normalized y index in matrix\r\nz = floor(norm.x * 10000) / 100; //normalized z index in matrix (derived from 2D for tex)\r\nx = (floor(norm.x * 10000) % 100) / 100; //normalized x index in matrix (separated from z)\r\n\r\n//get the radius for the placement on the disc\r\nscaled_radius = y * radius;\r\n\r\ntheta = x * ang; //calculate the current angle\r\n\r\nx = scaled_radius * cos(theta); //get the cartesian x\r\ny = scaled_radius * sin(theta); //get the cartesian y\r\n\r\nout1 = vec(x, y, z, 1); //output the resulting positions",
+					"code" : "y = norm.y; //normalized y index in matrix\r\nz = floor(floor(norm.x * 1000) / 100) / 10; //normalized z index in matrix (derived from 2D for tex)\r\nx = (floor(norm.x * 1000) % 100) / 100; //signed-normalized x index in matrix (separated from z)\r\n\r\ny1 = y;\r\nz1 = z;\r\nx1 = x;\r\n//get the radius for the placement on the disc\r\nscaled_radius = y * radius;\r\n\r\ntheta = z * ang; //calculate the current angle\r\n\r\nx = scaled_radius * cos(theta); //get the cartesian x\r\ny = scaled_radius * sin(theta); //get the cartesian y\r\n\r\nout1 = vec(x, y, z, 1); //output the resulting positions\r\n\r\nout2 = vec(x1,y1,z1,1); // DEBUG",
 					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-5",
 					"maxclass" : "codebox",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 50.0, 61.0, 619.0, 237.0 ],
 					"style" : ""
 				}
@@ -147,6 +158,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"source" : [ "obj-5", 1 ]
 				}
 
 			}
