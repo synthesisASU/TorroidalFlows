@@ -1,0 +1,141 @@
+<jittershader name="torr.particle.velocity.jxs">
+    <description>
+    Shader to compute the perturbed velocity of the toroidal flows model
+    </description>
+    <param name="radius" type="float" default="1.0"/>
+    <param name="y0" type="float" default="0.0"/>
+    <param name="time" type="float" default="0.0"/>
+    <param name="sigma" type="float" default="0.0"/>
+    <param name="gamma" type="float" default="0.0"/>
+    <param name="epsilon" type="float" default="0.0"/>
+    <param name="beta" type="float" default="0.0"/>
+    <param name="a" type="float" default="0.1"/>
+    <param name="b" type="float" default="0.1"/>
+    <param name="c" type="float" default="0.1"/>
+    <param name="stepSize" type="float" default="1.0"/>
+
+    <param name="tex0" type="int" default="0">
+        <description> Dummy in, just avoids max/msp stack overflow </description>
+    </param>
+    <param name="tex1" type="int" default="1">
+        <description> Particle Positions In </description>
+    </param>
+
+    <language name="glsl" version="1.2">
+        <bind param="radius" program="fp"/>
+        <bind param="y0" program="fp"/>
+        <bind param="time" program="fp"/>
+        <bind param="sigma" program="fp"/>
+        <bind param="gamma" program="fp"/>
+        <bind param="epsilon" program="fp"/>
+        <bind param="beta" program="fp"/>
+        <bind param="a" program="fp"/>
+        <bind param="b" program="fp"/>
+        <bind param="c" program="fp"/>
+        <bind param="tex0" program="fp"/>
+        <bind param="tex1" program="fp"/>
+        <program name="vp" type="vertex"/>
+<![CDATA[
+
+    #version 120
+
+    varying vec2 texcoord1;
+
+    void main(void) {
+        //pass things as they are
+        gl_Position = gl_Vertex;
+        gl_FrontColor = glColor;
+
+        //pass thru dims for 2nd texture
+        texcoord1 = vec2(gl_TextureMatrix[1] * gl_MultiTexCoord1);
+    }
+]]>
+    </program>
+    <program name="fp" type="fragment">
+<![CDATA[
+
+    #version 120
+
+    //compute the velocity for all given points from second texture inputs
+    varying vec2 texcoord1; //from tex we care about
+    uniform sampler2DRect tex1; //only creating for the tex we care about
+
+    //for the params we bound above
+    uniform float radius;
+    uniform float y0;
+    uniform float time;
+    uniform float sigma;
+    uniform float gamma;
+    uniform float epsilon;
+    uniform float beta;
+
+    void main(void) {
+
+        vec4 posIn = texture2DRect(tex1, texcoord1);
+
+        float pDist = sqrt(pow(posIn.r, 2) + pow(posIn.g, 2)); /* The distance from z axis */
+
+        /* CALCULATE PERTURBATION VECTOR */
+
+             /* CALCULATE U COMPONENT */
+            float uRadius = ((pow(radius, 2) - pow(pDist, 2)) / 2);
+            float uTime = gamma * cos(sigma * time);
+            float uSymm = posIn.g * (posIn.g - y0);
+            float uInternal = uSymm + uTime - uRadius;
+            float uVert = 1.0 - (beta * posIn.b);
+
+            float uComp = epsilon * uInternal * uVert;
+
+            /* CALCULATE V COMPONENT */
+
+            float vTime = gamma * cos(sigma * time);
+            float vSymm = posIn.g - y0;
+            float vInternal = vTime + vSymm;
+            float vVert = 1 - (beta * posIn.b);
+            float vComp = epsilon * vInternal * vVert;
+
+            float wComp = 0.0; //No perturbation in z dimension
+
+            vec4 perturbed = vec4(uComp, vComp, wComp, 0.0);
+
+        /* CALCULATE UNPERTURBED VECTOR */
+
+            /* CALCULATE U COMPONENT */
+            float uPri = (-1.0 * b) * posIn.r;
+            float uSeg = (1.0 - (2.0 * posIn.b));
+            float uTer = (radius - pDist) / 3.0;
+            float uUComp = uPri * uSeg * uTer - ((a * posIn.g) * (c + pow(posIn.b , 2)));
+
+            /* CALCULATE V COMPONENT */
+            float vPri = (-1.0 * b) * posIn.g;
+            float vSeg = (1.0 - (2.0 * posIn.b));
+            float vTer = (radius - pDist) / 3.0;
+            float vUComp = vPri * vSeg * vTer - ((a * posIn.r) * (c + pow(posIn.b, 2)));
+
+            /* CALCULATE W COMPONENT */
+            float wPri = b * posIn.b;
+            float wSeg = 1.0 - posIn.b;
+            float wTer = ((2 * radius) / 3.0) - pDist;
+            float wUComp = wPri * wSeg * wTer;
+
+            vec4 unperturbed = vec4(uUComp,vUComp,wUComp,1.0);
+
+
+        /* COMBINE VECTORS */
+        
+        vec4 combined = vec4(unperturbed.r + perturbed.r, unperturbed.g - perturbed.g, unperturbed.b, 1.0);
+
+        /* SCALE VELOCITY */
+
+        vec4 scaledVelocity = vec4(combined.r * stepSize, combined.g * stepSize, combined.b * stepSize, 0.0);
+
+        /* ADD TO ORIGINAL POSITION */
+
+        vec4 newPosition = posIn + scaledVelocity;
+
+        gl_FrontColor = newPosition;
+    }
+]]>
+        </program>
+    </language>
+</jittershader>

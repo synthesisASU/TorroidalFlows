@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 875.0, 676.0 ],
+		"rect" : [ 144.0, 128.0, 456.0, 676.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,32 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-339",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 238.0, 396.0, 158.0, 22.0 ],
+					"style" : "",
+					"text" : "read torr.particle.velocity.jxs"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-329",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_matrix", "" ],
+					"patching_rect" : [ 238.0, 431.0, 359.0, 22.0 ],
+					"style" : "",
+					"text" : "jit.gl.shader turtles @name pVelocity @file torr.particle.velocity.jxs"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-341",
 					"maxclass" : "comment",
@@ -75,7 +101,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 18.0, 373.0, 150.0, 20.0 ],
+					"patching_rect" : [ 416.0, 356.0, 150.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 14.0, 360.0, 150.0, 20.0 ],
 					"style" : "",
@@ -2742,7 +2768,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 176.0, 340.0, 150.0, 20.0 ],
+					"patching_rect" : [ 432.0, 305.0, 150.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 347.0, 152.0, 150.0, 20.0 ],
 					"style" : "",
@@ -9172,6 +9198,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-289", 0 ],
 					"source" : [ "obj-338", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-329", 0 ],
+					"source" : [ "obj-339", 0 ]
 				}
 
 			}
