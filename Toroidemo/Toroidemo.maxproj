@@ -1,8 +1,8 @@
 {
 	"name" : "Toroidemo",
 	"version" : 1,
-	"creationdate" : -715242362,
-	"modificationdate" : -712608439,
+	"creationdate" : -715242483,
+	"modificationdate" : 3585744509,
 	"viewrect" : [ 25.0, 70.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -61,6 +61,21 @@
 ,
 			"torr.tracer.color.genjit" : 			{
 				"kind" : "genjit",
+				"local" : 1
+			}
+,
+			"torr.tracer.color.jxs" : 			{
+				"kind" : "shader",
+				"local" : 1
+			}
+,
+			"torr.tracer.velocity.jxs" : 			{
+				"kind" : "shader",
+				"local" : 1
+			}
+,
+			"torr.particle.velocity.jxs" : 			{
+				"kind" : "shader",
 				"local" : 1
 			}
 

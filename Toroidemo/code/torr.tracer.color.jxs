@@ -1,0 +1,75 @@
+<jittershader name="color tracers">
+    <description>
+        sets the color of the tracer particles based on input and if they are located within the bounds of the model
+    </description>
+
+    <param name="tracer_color" type="vec4" default="1.0,0.0,0.0,1.0">
+        <description>
+            The color of the active tracer particles
+        </description>
+    </param>
+
+    <param name="tex0" type="int" default="0"/>
+
+    <language name="glsl" version="1.2">
+
+        <bind param="tracer_color" program="fp"/>
+        <bind param="tex0" program="fp"/>
+
+        <program name="vp" type="vertex">
+<![CDATA[
+
+    #version 120
+
+    varying vec2 texcoord0;
+    varying vec2 texdim0;
+
+    void main(void) {
+
+        gl_Position = ftransform();
+
+        texcoord0 = vec2(gl_TextureMatrix[0] * gl_MultiTexCoord0);
+        texdim0 = vec2(abs(gl_TextureMatrix[0][0][0]), abs(gl_TextureMatrix[0][1][1]));
+    }
+]]>
+        </program>
+        <program name="fp" type="fragment">
+<![CDATA[
+
+    #version 120
+
+    varying vec2 texdim0;
+    varying vec2 texcoord0;
+
+    uniform vec4 tracer_color;
+
+    uniform sampler2DRect tex0;
+
+    void main(void) {
+
+        //get the position of the tracer
+        vec4 posIn = texture2DRect(tex0, texcoord0);
+
+        //the sum of the xyz components, to be used to find if the tracer has been initialized
+        float posSum = posIn.x + posIn.y + posIn.z;
+
+        //the final output of the shader
+        vec4 outColor;
+
+        if(posSum > -30.0) { //if the position of the tracer is not the initial off state
+            //set the tracer to be the designated color
+            outColor = tracer_color;
+
+        } else { //if the tracer is in the inactive position
+            //set the tracer to be black & transparent
+            outColor = vec4(0.0,0.0,0.0,0.0);
+        }
+
+        //return the final color based on the position
+        gl_FragColor = outColor;
+    }
+
+]]>
+        </program>
+    </language>
+</jittershader>
