@@ -170,7 +170,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1184.0, -55.0, 62.0, 22.0 ],
+					"patching_rect" : [ 1184.0, -55.0, 74.0, 22.0 ],
 					"style" : "",
 					"text" : "r #0-bang"
 				}
@@ -396,7 +396,7 @@
 				"box" : 				{
 					"comment" : "Tracer Positions",
 					"id" : "obj-320",
-					"index" : 0,
+					"index" : 3,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -1061,9 +1061,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 1538.0, 937.0, 151.0, 22.0 ],
+					"patching_rect" : [ 1538.0, 937.0, 138.0, 22.0 ],
 					"style" : "",
-					"text" : "jit.matrix 3 float32 100 100"
+					"text" : "jit.matrix 3 float32 10 10"
 				}
 
 			}
@@ -2019,7 +2019,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-247",
-					"index" : 0,
+					"index" : 3,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -5206,7 +5206,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-2",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -6380,7 +6380,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-18",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -6406,7 +6406,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-59",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -6708,7 +6708,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-1",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -9672,62 +9672,7 @@
 				}
 
 			}
- ],
-		"parameters" : 		{
-			"obj-308" : [ "live.tab", "live.tab", 0 ]
-		}
-,
-		"dependency_cache" : [ 			{
-				"name" : "torr.particle.velocity.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
-				"patcherrelativepath" : "../code",
-				"type" : "gJIT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "torr.particle.positions.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
-				"patcherrelativepath" : "../code",
-				"type" : "gJIT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "torr.particle.colors.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
-				"patcherrelativepath" : "../code",
-				"type" : "gJIT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "torr.particle.perturbed.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
-				"patcherrelativepath" : "../code",
-				"type" : "gJIT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "torr.tracer.perturbed.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
-				"patcherrelativepath" : "../code",
-				"type" : "gJIT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "torr.tracer.velocity.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
-				"patcherrelativepath" : "../code",
-				"type" : "gJIT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "torr.tracer.color.genjit",
-				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
-				"patcherrelativepath" : "../code",
-				"type" : "gJIT",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }
