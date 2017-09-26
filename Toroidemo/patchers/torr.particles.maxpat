@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 875.0, 676.0 ],
+		"rect" : [ 1257.0, 356.0, 1626.0, 1279.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -396,7 +396,7 @@
 				"box" : 				{
 					"comment" : "Tracer Positions",
 					"id" : "obj-320",
-					"index" : 3,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -1084,7 +1084,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 84.0, 129.0, 640.0, 480.0 ],
+						"rect" : [ 1947.0, 1342.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1112,6 +1112,32 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "int", "int" ],
+									"patching_rect" : [ 352.0, 64.0, 34.0, 22.0 ],
+									"style" : "",
+									"text" : "t 0 0"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-1",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 352.0, 40.0, 97.0, 22.0 ],
+									"style" : "",
+									"text" : "r #0-tracer-reset"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-213",
 									"maxclass" : "message",
@@ -1157,9 +1183,9 @@
 									"numinlets" : 5,
 									"numoutlets" : 4,
 									"outlettype" : [ "int", "", "", "int" ],
-									"patching_rect" : [ 159.5, 341.0, 67.0, 22.0 ],
+									"patching_rect" : [ 159.5, 341.0, 61.0, 22.0 ],
 									"style" : "",
-									"text" : "counter 99"
+									"text" : "counter 9"
 								}
 
 							}
@@ -1248,9 +1274,9 @@
 									"numinlets" : 5,
 									"numoutlets" : 4,
 									"outlettype" : [ "int", "", "", "int" ],
-									"patching_rect" : [ 96.5, 162.5, 67.0, 22.0 ],
+									"patching_rect" : [ 96.5, 162.5, 61.0, 22.0 ],
 									"style" : "",
-									"text" : "counter 99"
+									"text" : "counter 9"
 								}
 
 							}
@@ -1391,6 +1417,13 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
+									"destination" : [ "obj-2", 0 ],
+									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-182", 4 ],
 									"midpoints" : [ 241.0, 393.0, 246.0, 393.0 ],
 									"source" : [ "obj-123", 0 ]
@@ -1438,7 +1471,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-198", 0 ],
-									"midpoints" : [ 154.0, 186.0, 154.0, 186.0 ],
+									"midpoints" : [ 148.0, 186.0, 154.0, 186.0 ],
 									"source" : [ "obj-184", 3 ]
 								}
 
@@ -1488,6 +1521,22 @@
 									"destination" : [ "obj-195", 0 ],
 									"midpoints" : [ 154.0, 240.0, 154.0, 240.0 ],
 									"source" : [ "obj-199", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-184", 2 ],
+									"midpoints" : [ 361.5, 147.0, 127.0, 147.0 ],
+									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-207", 2 ],
+									"midpoints" : [ 376.5, 327.0, 190.0, 327.0 ],
+									"source" : [ "obj-2", 1 ]
 								}
 
 							}
@@ -2019,7 +2068,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-247",
-					"index" : 3,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -5206,7 +5255,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-2",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -6380,7 +6429,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-18",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -6406,7 +6455,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-59",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -6708,7 +6757,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-1",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -9672,7 +9721,62 @@
 				}
 
 			}
- ]
+ ],
+		"parameters" : 		{
+			"obj-308" : [ "live.tab", "live.tab", 0 ]
+		}
+,
+		"dependency_cache" : [ 			{
+				"name" : "torr.particle.velocity.genjit",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"patcherrelativepath" : "../code",
+				"type" : "gJIT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "torr.particle.positions.genjit",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"patcherrelativepath" : "../code",
+				"type" : "gJIT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "torr.particle.colors.genjit",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"patcherrelativepath" : "../code",
+				"type" : "gJIT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "torr.particle.perturbed.genjit",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"patcherrelativepath" : "../code",
+				"type" : "gJIT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "torr.tracer.perturbed.genjit",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"patcherrelativepath" : "../code",
+				"type" : "gJIT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "torr.tracer.velocity.genjit",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"patcherrelativepath" : "../code",
+				"type" : "gJIT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "torr.tracer.color.genjit",
+				"bootpath" : "~/Documents/Max 7/Projects/TorroidalFlows/Toroidemo/code",
+				"patcherrelativepath" : "../code",
+				"type" : "gJIT",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }
