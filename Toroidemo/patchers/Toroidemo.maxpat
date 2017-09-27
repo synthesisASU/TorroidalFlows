@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 1735.0, 1060.0, 1002.0, 743.0 ],
+		"rect" : [ 1616.0, 574.0, 1002.0, 743.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -646,7 +646,7 @@
 					"saved_object_attributes" : 					{
 						"client_rect" : [ 100, 100, 500, 600 ],
 						"parameter_enable" : 0,
-						"storage_rect" : [ 200, 200, 800, 500 ]
+						"storage_rect" : [ 1294, 922, 2842, 1927 ]
 					}
 ,
 					"style" : "",
@@ -828,7 +828,7 @@
 					"outlettype" : [ "jit_gl_texture", "jit_matrix", "jit_matrix" ],
 					"patching_rect" : [ 43.0, 273.0, 196.0, 460.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 14.0, 236.0, 685.0, 459.0 ],
+					"presentation_rect" : [ 14.0, 236.0, 685.0, 483.0 ],
 					"varname" : "torr.particles",
 					"viewvisibility" : 1
 				}
@@ -898,7 +898,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 310.0, 130.0, 37.0, 22.0 ],
+					"patching_rect" : [ 333.0, 131.0, 37.0, 22.0 ],
 					"style" : "",
 					"text" : "reset"
 				}
@@ -1025,7 +1025,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-17", 0 ],
-					"midpoints" : [ 319.5, 268.0, 52.5, 268.0 ],
+					"midpoints" : [ 342.5, 268.0, 52.5, 268.0 ],
 					"source" : [ "obj-10", 0 ]
 				}
 
@@ -1155,7 +1155,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
-					"midpoints" : [ 73.5, 75.0, 319.5, 75.0 ],
+					"midpoints" : [ 73.5, 75.0, 342.5, 75.0 ],
 					"source" : [ "obj-3", 1 ]
 				}
 
