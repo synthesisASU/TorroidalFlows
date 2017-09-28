@@ -92,7 +92,7 @@
 					"torr.particles::tracer-enable" : [  ],
 					"torr.particles::tracer_color" : [  ],
 					"torr.particles::tracer_size" : [  ],
-					"torr.particles::display_mode" : [  ],
+					"torr.particles::display_mode" : [ 0.0 ],
 					"torr.particles::timeStep" : [  ],
 					"torr.particles::autoTime" : [  ],
 					"torr.particles::tracer-start" : [ "blank" ]
@@ -141,7 +141,7 @@
 					"torr.particles::tracer-enable" : [  ],
 					"torr.particles::tracer_color" : [  ],
 					"torr.particles::tracer_size" : [  ],
-					"torr.particles::display_mode" : [  ],
+					"torr.particles::display_mode" : [ 0.0 ],
 					"torr.particles::timeStep" : [  ],
 					"torr.particles::autoTime" : [  ],
 					"torr.particles::tracer-start" : [ "blank" ]
@@ -190,7 +190,7 @@
 					"torr.particles::tracer-enable" : [  ],
 					"torr.particles::tracer_color" : [  ],
 					"torr.particles::tracer_size" : [  ],
-					"torr.particles::display_mode" : [  ],
+					"torr.particles::display_mode" : [ 0.0 ],
 					"torr.particles::timeStep" : [  ],
 					"torr.particles::autoTime" : [  ],
 					"torr.particles::tracer-start" : [ "blank" ]
@@ -238,11 +238,11 @@
 					"torr.particles::t" : [ 0.1 ],
 					"torr.particles::tracer-enable" : [  ],
 					"torr.particles::tracer_color" : [ 1.0, 0.0, 0.0, 1.0 ],
-					"torr.particles::tracer_size" : [ 5.0 ],
+					"torr.particles::tracer_size" : [ 10.0 ],
 					"torr.particles::display_mode" : [ 2.0 ],
 					"torr.particles::timeStep" : [  ],
 					"torr.particles::autoTime" : [  ],
-					"torr.particles::tracer-start" : [ "blank" ]
+					"torr.particles::tracer-start" : [ "scatter" ]
 				}
 
 			}
@@ -288,7 +288,7 @@
 					"torr.particles::tracer-enable" : [  ],
 					"torr.particles::tracer_color" : [  ],
 					"torr.particles::tracer_size" : [  ],
-					"torr.particles::display_mode" : [  ],
+					"torr.particles::display_mode" : [ 0.0 ],
 					"torr.particles::timeStep" : [  ],
 					"torr.particles::autoTime" : [  ],
 					"torr.particles::tracer-start" : [ "blank" ]
@@ -337,7 +337,7 @@
 					"torr.particles::tracer-enable" : [  ],
 					"torr.particles::tracer_color" : [  ],
 					"torr.particles::tracer_size" : [  ],
-					"torr.particles::display_mode" : [  ],
+					"torr.particles::display_mode" : [ 0.0 ],
 					"torr.particles::timeStep" : [  ],
 					"torr.particles::autoTime" : [  ],
 					"torr.particles::tracer-start" : [ "blank" ]
@@ -386,7 +386,7 @@
 					"torr.particles::tracer-enable" : [  ],
 					"torr.particles::tracer_color" : [  ],
 					"torr.particles::tracer_size" : [  ],
-					"torr.particles::display_mode" : [  ],
+					"torr.particles::display_mode" : [ 0.0 ],
 					"torr.particles::timeStep" : [  ],
 					"torr.particles::autoTime" : [  ],
 					"torr.particles::tracer-start" : [ "blank" ]
@@ -435,7 +435,7 @@
 					"torr.particles::tracer-enable" : [  ],
 					"torr.particles::tracer_color" : [  ],
 					"torr.particles::tracer_size" : [  ],
-					"torr.particles::display_mode" : [  ],
+					"torr.particles::display_mode" : [ 0.0 ],
 					"torr.particles::timeStep" : [  ],
 					"torr.particles::autoTime" : [  ],
 					"torr.particles::tracer-start" : [ "blank" ]
@@ -484,7 +484,7 @@
 					"torr.particles::tracer-enable" : [  ],
 					"torr.particles::tracer_color" : [  ],
 					"torr.particles::tracer_size" : [  ],
-					"torr.particles::display_mode" : [  ],
+					"torr.particles::display_mode" : [ 0.0 ],
 					"torr.particles::timeStep" : [  ],
 					"torr.particles::autoTime" : [  ],
 					"torr.particles::tracer-start" : [ "blank" ]
@@ -533,7 +533,7 @@
 					"torr.particles::tracer-enable" : [  ],
 					"torr.particles::tracer_color" : [  ],
 					"torr.particles::tracer_size" : [  ],
-					"torr.particles::display_mode" : [  ],
+					"torr.particles::display_mode" : [ 0.0 ],
 					"torr.particles::timeStep" : [  ],
 					"torr.particles::autoTime" : [  ],
 					"torr.particles::tracer-start" : [ "blank" ]
@@ -582,7 +582,7 @@
 					"torr.particles::tracer-enable" : [  ],
 					"torr.particles::tracer_color" : [  ],
 					"torr.particles::tracer_size" : [  ],
-					"torr.particles::display_mode" : [  ],
+					"torr.particles::display_mode" : [ 0.0 ],
 					"torr.particles::timeStep" : [  ],
 					"torr.particles::autoTime" : [  ],
 					"torr.particles::tracer-start" : [ "blank" ]
@@ -631,7 +631,7 @@
 					"torr.particles::tracer-enable" : [  ],
 					"torr.particles::tracer_color" : [  ],
 					"torr.particles::tracer_size" : [  ],
-					"torr.particles::display_mode" : [  ],
+					"torr.particles::display_mode" : [ 0.0 ],
 					"torr.particles::timeStep" : [  ],
 					"torr.particles::autoTime" : [  ],
 					"torr.particles::tracer-start" : [ "blank" ]
@@ -680,7 +680,7 @@
 					"torr.particles::tracer-enable" : [  ],
 					"torr.particles::tracer_color" : [  ],
 					"torr.particles::tracer_size" : [  ],
-					"torr.particles::display_mode" : [  ],
+					"torr.particles::display_mode" : [ 0.0 ],
 					"torr.particles::timeStep" : [  ],
 					"torr.particles::autoTime" : [  ],
 					"torr.particles::tracer-start" : [ "blank" ]
@@ -729,7 +729,7 @@
 					"torr.particles::tracer-enable" : [  ],
 					"torr.particles::tracer_color" : [  ],
 					"torr.particles::tracer_size" : [  ],
-					"torr.particles::display_mode" : [  ],
+					"torr.particles::display_mode" : [ 0.0 ],
 					"torr.particles::timeStep" : [  ],
 					"torr.particles::autoTime" : [  ],
 					"torr.particles::tracer-start" : [ "blank" ]
