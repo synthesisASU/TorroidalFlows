@@ -798,7 +798,7 @@
 					"torr.render::output_texture" : [ 0 ],
 					"torr.render::output_matrix" : [ 0 ],
 					"torr.render::far_clip" : [ 0 ],
-					"torr.particles::dim" : [ 100, 100 ],
+					"torr.particles::dim" : [ 1, 1 ],
 					"torr.particles::invert" : [ 0.0 ],
 					"torr.particles::slideUp" : [ 0.0 ],
 					"torr.particles::slideDown" : [ 0.0 ],
